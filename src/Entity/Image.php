@@ -38,7 +38,7 @@ class Image
 
     public function setName(string $name): self
     {
-        $this->name = $name;
+        $this->name = substr($name,strpos($name, 'uploads/files/'));
 
         return $this;
     }
