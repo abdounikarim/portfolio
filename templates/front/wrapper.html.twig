@@ -45,9 +45,11 @@
             <section class="features">
                 {% for project in projects %}
                 <article>
-                    <a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
-                    <h3 class="major">Mon projet</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+                    <a href="#" class="image">
+                        <img src="{{ asset(project.image.name) }}" alt="{{ project.image.alt }}" />
+                    </a>
+                    <h3 class="major">{{ project.name }}</h3>
+                    <p>{{ project.description }}</p>
                     <a href="#" class="special">Voir plus</a>
                 </article>
                 {% endfor %}
