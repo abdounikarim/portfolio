@@ -38,10 +38,16 @@ class Image
      */
     private $projects;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Experience", mappedBy="image")
+     */
+    private $experiences;
+
     public function __construct()
     {
         $this->skills = new ArrayCollection();
         $this->projects = new ArrayCollection();
+        $this->experiences = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -134,6 +140,37 @@ class Image
             // set the owning side to null (unless already changed)
             if ($project->getImage() === $this) {
                 $project->setImage(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Experience[]
+     */
+    public function getExperiences(): Collection
+    {
+        return $this->experiences;
+    }
+
+    public function addExperience(Experience $experience): self
+    {
+        if (!$this->experiences->contains($experience)) {
+            $this->experiences[] = $experience;
+            $experience->setImage($this);
+        }
+
+        return $this;
+    }
+
+    public function removeExperience(Experience $experience): self
+    {
+        if ($this->experiences->contains($experience)) {
+            $this->experiences->removeElement($experience);
+            // set the owning side to null (unless already changed)
+            if ($experience->getImage() === $this) {
+                $experience->setImage(null);
             }
         }
 
