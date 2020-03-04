@@ -26,5 +26,8 @@ easy_admin:
                     - { property: 'name'}
                     - { property: 'image', type: 'image'}
 
+        Project:
+            class: App\Entity\Project
+
         User:
             class: App\Entity\User

@@ -33,9 +33,15 @@ class Image
      */
     private $skills;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Project", mappedBy="image")
+     */
+    private $projects;
+
     public function __construct()
     {
         $this->skills = new ArrayCollection();
+        $this->projects = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -101,5 +107,36 @@ class Image
     public function __toString()
     {
         return $this->name;
+    }
+
+    /**
+     * @return Collection|Project[]
+     */
+    public function getProjects(): Collection
+    {
+        return $this->projects;
+    }
+
+    public function addProject(Project $project): self
+    {
+        if (!$this->projects->contains($project)) {
+            $this->projects[] = $project;
+            $project->setImage($this);
+        }
+
+        return $this;
+    }
+
+    public function removeProject(Project $project): self
+    {
+        if ($this->projects->contains($project)) {
+            $this->projects->removeElement($project);
+            // set the owning side to null (unless already changed)
+            if ($project->getImage() === $this) {
+                $project->setImage(null);
+            }
+        }
+
+        return $this;
     }
 }
