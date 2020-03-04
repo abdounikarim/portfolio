@@ -22,4 +22,29 @@ class FrontController extends AbstractController
             'form' => $form->createView(),
         ]);
     }
+
+    public function experiences()
+    {
+
+    }
+
+    public function experience()
+    {
+
+    }
+
+    public function projects()
+    {
+
+    }
+
+    public function project()
+    {
+
+    }
+
+    public function legal()
+    {
+
+    }
 }
