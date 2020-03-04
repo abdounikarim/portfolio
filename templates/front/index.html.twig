@@ -1,14 +1,17 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello FrontController!{% endblock %}
-
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <div id="page-wrapper">
 
-<div class="example-wrapper">
-    <h1>Portfolio</h1>
-</div>
+        {{ include('front/header.html.twig') }}
+
+        {{ include('front/menu.html.twig') }}
+
+        {{ include('front/banner.html.twig') }}
+
+        {{ include('front/wrapper.html.twig') }}
+
+        {{ include('front/footer.html.twig') }}
+
+    </div>
 {% endblock %}
