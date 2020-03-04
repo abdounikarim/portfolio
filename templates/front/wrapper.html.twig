@@ -43,14 +43,14 @@
             <h2 class="major">Portfolio</h2>
             <p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
             <section class="features">
-                {# for #}
+                {% for project in projects %}
                 <article>
                     <a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
                     <h3 class="major">Mon projet</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
                     <a href="#" class="special">Voir plus</a>
                 </article>
-                {# endfor #}
+                {% endfor %}
             </section>
             <ul class="actions">
                 <li><a href="#" class="button">Tous les projets</a></li>
