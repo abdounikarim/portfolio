@@ -1,6 +1,16 @@
 easy_admin:
+    site_name: 'Portfolio'
     entities:
         # List the entity class name you want to manage
-        - App\Entity\Image
-        - App\Entity\Skill
-        - App\Entity\User
+        Image:
+            class: App\Entity\Image
+            form:
+                fields:
+                    - { property: 'name', type: 'file_upload', label: 'File'}
+                    - { property: 'alt'}
+
+        Skill:
+            class: App\Entity\Skill
+
+        User:
+            class: App\Entity\User
