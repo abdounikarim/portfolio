@@ -6,7 +6,11 @@ easy_admin:
             class: App\Entity\Image
             form:
                 fields:
-                    - { property: 'name', type: 'file_upload', label: 'File'}
+                    - { property: 'name', type: 'file_upload' }
+                    - { property: 'alt'}
+            list:
+                fields:
+                    - { property: 'name', type: 'image' }
                     - { property: 'alt'}
 
         Skill:
