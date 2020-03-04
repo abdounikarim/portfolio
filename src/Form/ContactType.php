@@ -19,18 +19,26 @@ class ContactType extends AbstractType
         $builder
             ->add('name', TextType::class, [
                 'constraints' => [
-                    new NotBlank()
+                    new NotBlank([
+                        'message' => 'Merci de renseigner un nom'
+                    ])
                 ]
             ])
             ->add('email', EmailType::class, [
                 'constraints' => [
-                    new NotBlank(),
-                    new Email()
+                    new NotBlank([
+                        'message' => 'Merci de renseigner un email'
+                    ]),
+                    new Email([
+                        'message' => 'Merci de renseigner un email valide'
+                    ])
                 ]
             ])
             ->add('message', TextareaType::class, [
                 'constraints' => [
-                    new NotBlank()
+                    new NotBlank([
+                        'message' => 'Merci de renseigner un message'
+                    ])
                 ]
             ])
         ;
