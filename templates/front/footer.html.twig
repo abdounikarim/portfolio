@@ -3,25 +3,29 @@
     <div class="inner">
         <h2 class="major">Contact</h2>
         <p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
-        <form method="post" action="#">
+
+        {{ form_start(form) }}
             <div class="fields">
                 <div class="field">
-                    <label for="name">Name</label>
-                    <input type="text" name="name" id="name" />
+                    {{ form_row(form.name, {
+                        label: 'Votre nom'
+                    }) }}
                 </div>
                 <div class="field">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" />
+                    {{ form_row(form.email, {
+                        label: 'Votre email'
+                    }) }}
                 </div>
                 <div class="field">
-                    <label for="message">Message</label>
-                    <textarea name="message" id="message" rows="4"></textarea>
+                    {{ form_row(form.message, {
+                        label: 'Votre message'
+                    }) }}
                 </div>
             </div>
             <ul class="actions">
                 <li><input type="submit" value="Envoyer" /></li>
             </ul>
-        </form>
+        {{ form_end(form) }}
         <ul class="contact">
             <li class="icon solid fa-home">
                 Untitled Inc<br />
