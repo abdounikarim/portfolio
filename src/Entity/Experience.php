@@ -87,7 +87,7 @@ class Experience
         return $this->ended;
     }
 
-    public function setEnded(\DateTimeInterface $ended): self
+    public function setEnded(?\DateTimeInterface $ended): self
     {
         $this->ended = $ended;
 
