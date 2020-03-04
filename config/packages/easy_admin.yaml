@@ -19,12 +19,12 @@ easy_admin:
             form:
                 fields:
                     - { property: 'name'}
-                    - { property: 'image'}
+                    - { property: 'image', type_options: { expanded: true, multiple: false }}
             list:
                 fields:
                     - { property: 'id'}
                     - { property: 'name'}
-                    - { property: 'image'}
+                    - { property: 'image', type: 'image'}
 
         User:
             class: App\Entity\User
