@@ -21,6 +21,11 @@ class Skill
      */
     private $name;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Image", inversedBy="skills")
+     */
+    private $image;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -34,6 +39,18 @@ class Skill
     public function setName(string $name): self
     {
         $this->name = $name;
+
+        return $this;
+    }
+
+    public function getImage(): ?Image
+    {
+        return $this->image;
+    }
+
+    public function setImage(?Image $image): self
+    {
+        $this->image = $image;
 
         return $this;
     }

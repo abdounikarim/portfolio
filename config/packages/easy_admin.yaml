@@ -10,11 +10,21 @@ easy_admin:
                     - { property: 'alt'}
             list:
                 fields:
+                    - { property: 'id'}
                     - { property: 'name', type: 'image' }
                     - { property: 'alt'}
 
         Skill:
             class: App\Entity\Skill
+            form:
+                fields:
+                    - { property: 'name'}
+                    - { property: 'image'}
+            list:
+                fields:
+                    - { property: 'id'}
+                    - { property: 'name'}
+                    - { property: 'image'}
 
         User:
             class: App\Entity\User
