@@ -61,8 +61,11 @@ class FrontController extends AbstractController
 
     }
 
+    /**
+     * @Route("/mentions-legales", name="legals")
+     */
     public function legal()
     {
-
+        return $this->render('front/legal.html.twig');
     }
 }
