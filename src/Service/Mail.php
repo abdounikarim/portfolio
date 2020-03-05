@@ -3,6 +3,8 @@
 namespace App\Service;
 
 use App\Entity\Contact;
+use Symfony\Component\Mailer\Exception\TransportException;
+use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 
@@ -33,6 +35,10 @@ class Mail
                 'contact' => $contact,
             ])
         ;
-        $this->mailer->send($email);
+        try {
+            $this->mailer->send($email);
+        } catch (TransportExceptionInterface $e) {
+            throw new TransportException('Problème d\'envoi du mail');
+        }
     }
 }
