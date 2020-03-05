@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Form\ContactType;
+use App\Repository\ExperienceRepository;
 use App\Repository\ProjectRepository;
 use App\Service\Mail;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -14,7 +15,7 @@ class FrontController extends AbstractController
     /**
      * @Route("/", name="front")
      */
-    public function front(Request $request, Mail $mail, ProjectRepository $projectRepository)
+    public function front(Request $request, Mail $mail, ExperienceRepository $experienceRepository, ProjectRepository $projectRepository)
     {
         $form = $this->createForm(ContactType::class);
         $form->handleRequest($request);
@@ -24,6 +25,7 @@ class FrontController extends AbstractController
             return $this->redirectToRoute('front');
         }
         return $this->render('front/index.html.twig', [
+            'experiences' => $experienceRepository->findAll(),
             'projects' => $projectRepository->findLastFourth(),
             'form' => $form->createView(),
         ]);
