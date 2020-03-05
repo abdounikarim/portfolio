@@ -25,7 +25,7 @@ class FrontController extends AbstractController
             return $this->redirectToRoute('front');
         }
         return $this->render('front/index.html.twig', [
-            'experiences' => $experienceRepository->findAll(),
+            'experiences' => $experienceRepository->findLastThree(),
             'projects' => $projectRepository->findLastFourth(),
             'form' => $form->createView(),
         ]);
