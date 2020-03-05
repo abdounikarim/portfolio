@@ -10,6 +10,13 @@
                     <a href="#" class="special">Voir plus</a>
                 </div>
             </div>
+            {% if loop.index is same as(3) %}
+            <div class="inner left">
+                <ul class="actions center">
+                    <li><a href="#" class="button">Toutes les expériences</a></li>
+                </ul>
+            </div>
+            {% endif %}
         </section>
     {% endfor %}
 
@@ -30,7 +37,7 @@
                 </article>
                 {% endfor %}
             </section>
-            <ul class="actions">
+            <ul class="actions center">
                 <li><a href="#" class="button">Tous les projets</a></li>
             </ul>
         </div>

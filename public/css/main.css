@@ -4154,3 +4154,10 @@ body.is-preload #banner p {
     }
 
 }
+
+.center {
+    justify-content: center;
+}
+.left {
+    justify-content: center;
+}
