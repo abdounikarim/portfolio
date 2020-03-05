@@ -1,6 +1,12 @@
 <!-- Banner -->
 <section id="banner">
     <div class="inner">
+        {% for message in app.flashes('contact') %}
+            <div class="flash-notice">
+                {{ message }}
+            </div>
+            <br>
+        {% endfor %}
         <div class="logo">
             {# Remplace by the user image #}
             <span class="icon fa-gem"></span>
