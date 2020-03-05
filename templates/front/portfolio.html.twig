@@ -1,0 +1,17 @@
+<!-- Four -->
+<section id="four" class="wrapper alt style1">
+    <div class="inner">
+        <h2 class="major">Portfolio</h2>
+        <p>Dans cette section, vous pouvez retrouver une partie des différents projets sur lesquels j'ai travaillé. Que ce soit seul ou en équipe, je suis capable de m'adapter pour répondre aux besoins du client.</p>
+        <section class="features">
+            {% for project in projects %}
+                {{ include('_inc/_project.html.twig') }}
+            {% endfor %}
+        </section>
+        {% if all is same as(false) %}
+            <ul class="actions center">
+                <li><a href="{{ path('projects') }}" class="button">Tous les projets</a></li>
+            </ul>
+        {% endif %}
+    </div>
+</section>

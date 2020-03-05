@@ -46,9 +46,14 @@ class FrontController extends AbstractController
 
     }
 
-    public function projects()
+    /**
+     * @Route("/projets", name="projects")
+     */
+    public function projects(ProjectRepository $projectRepository)
     {
-
+        return $this->render('front/projects.html.twig', [
+            'projects' => $projectRepository->findAll()
+        ]);
     }
 
     public function project()

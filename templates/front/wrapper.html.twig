@@ -1,31 +1,13 @@
 <!-- Wrapper -->
 <section id="wrapper">
+
     {% for experience in experiences %}
         {% set front = true %}
-        {{ include('front/_experience.html.twig') }}
+        {{ include('_inc/_experience.html.twig') }}
     {% endfor %}
 
-    <!-- Four -->
-    <section id="four" class="wrapper alt style1">
-        <div class="inner">
-            <h2 class="major">Portfolio</h2>
-            <p>Dans cette section, vous pouvez retrouver une partie des différents projets sur lesquels j'ai travaillé. Que ce soit seul ou en équipe, je suis capable de m'adapter pour répondre aux besoins du client.</p>
-            <section class="features">
-                {% for project in projects %}
-                <article>
-                    <a href="#" class="image">
-                        <img src="{{ asset(project.image.name) }}" alt="{{ project.image.alt }}" />
-                    </a>
-                    <h3 class="major">{{ project.name }}</h3>
-                    <p>{{ project.description }}</p>
-                    <a href="#" class="special">Voir plus</a>
-                </article>
-                {% endfor %}
-            </section>
-            <ul class="actions center">
-                <li><a href="#" class="button">Tous les projets</a></li>
-            </ul>
-        </div>
-    </section>
+    {{ include('front/portfolio.html.twig', {
+        all: false
+    }) }}
 
 </section>
