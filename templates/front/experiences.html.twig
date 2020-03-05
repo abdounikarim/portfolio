@@ -9,9 +9,10 @@
 
         {{ include('front/banner.html.twig') }}
 
-        {{ include('front/wrapper.html.twig') }}
-
-        {{ include('front/contact.html.twig') }}
+        {% for experience in experiences %}
+            {% set front = false %}
+            {{ include('front/_experience.html.twig') }}
+        {% endfor %}
 
         {{ include('front/footer.html.twig') }}
 

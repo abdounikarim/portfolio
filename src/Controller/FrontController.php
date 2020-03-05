@@ -31,9 +31,14 @@ class FrontController extends AbstractController
         ]);
     }
 
-    public function experiences()
+    /**
+     * @Route("/experiences", name="experiences")
+     */
+    public function experiences(ExperienceRepository $experienceRepository)
     {
-
+        return $this->render('front/experiences.html.twig', [
+            'experiences' => $experienceRepository->findAll()
+        ]);
     }
 
     public function experience()

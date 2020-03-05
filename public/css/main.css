@@ -4038,7 +4038,7 @@ body.is-preload #banner p {
     width: calc(50% - 1.5em);
 }
 
-#footer .inner .copyright {
+footer .inner .copyright {
     border-top: solid 2px rgba(255, 255, 255, 0.125);
     list-style: none;
     margin: 4em 0 2em 0;
@@ -4047,7 +4047,7 @@ body.is-preload #banner p {
     text-align: center;
 }
 
-#footer .inner .copyright li {
+footer .inner .copyright li {
     border-left: solid 2px rgba(255, 255, 255, 0.125);
     color: rgba(255, 255, 255, 0.35);
     display: inline-block;
@@ -4058,13 +4058,13 @@ body.is-preload #banner p {
     padding-left: 1em;
 }
 
-#footer .inner .copyright li:first-child {
+footer .inner .copyright li:first-child {
     border-left: 0;
     margin-left: 0;
     padding-left: 0;
 }
 
-#footer .inner .copyright li a {
+footer .inner .copyright li a {
     color: inherit;
 }
 
@@ -4106,7 +4106,7 @@ body.is-preload #banner p {
         margin: 0 0 4em 0;
     }
 
-    #footer .inner .copyright {
+    footer .inner .copyright {
         margin: 4em 0 2em 0;
     }
 
@@ -4135,14 +4135,14 @@ body.is-preload #banner p {
 
 @media screen and (max-width: 480px) {
 
-    #footer .inner .copyright li {
+    footer .inner .copyright li {
         border-left: 0;
         display: block;
         margin: 1em 0 0 0;
         padding-left: 0;
     }
 
-    #footer .inner .copyright li:first-child {
+    footer .inner .copyright li:first-child {
         margin-top: 0;
     }
 
