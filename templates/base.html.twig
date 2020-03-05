@@ -12,7 +12,21 @@
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        {% block body %}
+            <div id="page-wrapper">
+
+                {{ include('_inc/_header.html.twig') }}
+
+                {{ include('_inc/_menu.html.twig') }}
+
+                {{ include('_inc/_banner.html.twig') }}
+
+                {% block content %}{% endblock %}
+
+                {{ include('_inc/_footer.html.twig') }}
+
+            </div>
+        {% endblock %}
         {% block javascripts %}
             <script src="{{ asset('js/jquery.min.js') }}"></script>
             <script src="{{ asset('js/jquery.scrollex.min.js') }}"></script>

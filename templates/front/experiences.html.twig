@@ -1,20 +1,10 @@
 {% extends 'base.html.twig' %}
 
-{% block body %}
-    <div id="page-wrapper">
+{% block content %}
 
-        {{ include('front/header.html.twig') }}
+    {% for experience in experiences %}
+        {% set front = false %}
+        {{ include('_inc/_experience.html.twig') }}
+    {% endfor %}
 
-        {{ include('front/menu.html.twig') }}
-
-        {{ include('front/banner.html.twig') }}
-
-        {% for experience in experiences %}
-            {% set front = false %}
-            {{ include('_inc/_experience.html.twig') }}
-        {% endfor %}
-
-        {{ include('front/footer.html.twig') }}
-
-    </div>
 {% endblock %}

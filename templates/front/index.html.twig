@@ -1,19 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block body %}
-    <div id="page-wrapper">
+{% block content %}
 
-        {{ include('front/header.html.twig') }}
+    {{ include('_inc/_wrapper.html.twig') }}
 
-        {{ include('front/menu.html.twig') }}
+    {{ include('_inc/_form.html.twig') }}
 
-        {{ include('front/banner.html.twig') }}
-
-        {{ include('front/wrapper.html.twig') }}
-
-        {{ include('front/contact.html.twig') }}
-
-        {{ include('front/footer.html.twig') }}
-
-    </div>
 {% endblock %}
