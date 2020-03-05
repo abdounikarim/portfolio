@@ -10,6 +10,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints\Email;
+use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
 
 class ContactType extends AbstractType
@@ -21,6 +22,12 @@ class ContactType extends AbstractType
                 'constraints' => [
                     new NotBlank([
                         'message' => 'Merci de renseigner un nom'
+                    ]),
+                    new Length([
+                        'min' => 2,
+                        'max' => 255,
+                        'minMessage' => 'Vous devez renseigner un minimum de 2 caractères',
+                        'maxMessage' => 'Vous devez renseigner un maximum de 255 caractères'
                     ])
                 ]
             ])
@@ -31,6 +38,12 @@ class ContactType extends AbstractType
                     ]),
                     new Email([
                         'message' => 'Merci de renseigner un email valide'
+                    ]),
+                    new Length([
+                        'min' => 2,
+                        'max' => 255,
+                        'minMessage' => 'Vous devez renseigner un minimum de 2 caractères',
+                        'maxMessage' => 'Vous devez renseigner un maximum de 255 caractères'
                     ])
                 ]
             ])
