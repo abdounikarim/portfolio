@@ -1,0 +1,17 @@
+<section class="wrapper spotlight {{ loop.index is divisible by (2) ? 'alt style2' : 'style1' }}">
+    <div class="inner">
+        <a href="#" class="image"><img src="{{ asset(experience.image.name) }}" alt="{{ experience.image.alt }}" /></a>
+        <div class="content">
+            <h2 class="major">{{ experience.title}}</h2>
+            <p>{{ experience.description }}</p>
+            {#<a href="#" class="special">Voir plus</a>#}
+        </div>
+    </div>
+    {% if loop.index is same as(3) and front %}
+        <div class="inner left">
+            <ul class="actions center">
+                <li><a href="{{ path('experiences') }}" class="button">Toutes les expériences</a></li>
+            </ul>
+        </div>
+    {% endif %}
+</section>

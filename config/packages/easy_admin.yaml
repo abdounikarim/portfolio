@@ -1,0 +1,68 @@
+easy_admin:
+    site_name: 'Portfolio'
+    entities:
+        # List the entity class name you want to manage
+        Experience:
+            class: App\Entity\Experience
+            form:
+                fields:
+                    - { property: 'title'}
+                    - { property: 'started'}
+                    - { property: 'ended'}
+                    - { property: 'description'}
+                    - { property: 'skills'}
+                    - { property: 'image', type_options: { expanded: true, multiple: false }}
+
+            list:
+                fields:
+                    - { property: 'id'}
+                    - { property: 'title'}
+                    - { property: 'started'}
+                    - { property: 'ended'}
+                    - { property: 'skills'}
+                    - { property: 'image', type: 'image' }
+
+        Image:
+            class: App\Entity\Image
+            form:
+                fields:
+                    - { property: 'name', type: 'file_upload' }
+                    - { property: 'alt'}
+            list:
+                fields:
+                    - { property: 'id'}
+                    - { property: 'name', type: 'image' }
+                    - { property: 'alt'}
+
+        Skill:
+            class: App\Entity\Skill
+            form:
+                fields:
+                    - { property: 'name'}
+                    - { property: 'image', type_options: { expanded: true, multiple: false }}
+            list:
+                fields:
+                    - { property: 'id'}
+                    - { property: 'name'}
+                    - { property: 'image', type: 'image'}
+
+        Project:
+            class: App\Entity\Project
+            form:
+                fields:
+                    - { property: 'name'}
+                    - { property: 'description' }
+                    - { property: 'started'}
+                    - { property: 'ended'}
+                    - { property: 'link', type: 'url' }
+                    - { property: 'image'}
+                    - { property: 'skills' }
+            list:
+                fields:
+                    - { property: 'id'}
+                    - { property: 'name'}
+                    - { property: 'started'}
+                    - { property: 'ended'}
+                    - { property: 'link', type: 'url' }
+                    - { property: 'image', type: 'image'}
+                    - { property: 'skills' }

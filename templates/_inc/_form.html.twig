@@ -1,0 +1,50 @@
+<!-- Form -->
+<section id="footer">
+    <div class="inner">
+        <h2 class="major">Contact</h2>
+        <p>Vous souhaitez que je participe à l'un de vos projets ? Vous êtes intéressés par mon profil ? Vous avez une question ? N'hésitez pas à me contacter, je vous réponds dans les plus brefs délais.</p>
+
+        {{ form_start(form) }}
+            <div class="fields">
+                <div class="field">
+                    {{ form_row(form.name, {
+                        label: 'Votre nom'
+                    }) }}
+                </div>
+                <div class="field">
+                    {{ form_row(form.email, {
+                        label: 'Votre email'
+                    }) }}
+                </div>
+                <div class="field">
+                    {{ form_row(form.message, {
+                        label: 'Votre message'
+                    }) }}
+                </div>
+            </div>
+            <ul class="actions">
+                <li><input type="submit" value="Envoyer" /></li>
+            </ul>
+        {{ form_end(form) }}
+        <ul class="contact">
+            <li class="icon solid fa-phone">06-45-65-50-16</li>
+            <li class="icon solid fa-envelope">
+                <a href="mailto:abdounikarim@gmail.com">abdounikarim@gmail.com</a>
+            </li>
+            <li class="icon brands fa-github">
+                <a href="https://github.com/abdounikarim">github.com/abdounikarim</a>
+            </li>
+            <li class="icon brands fa-symfony">
+                <a href="https://connect.symfony.com/profile/abdounikarim">connect.symfony.com/profile/abdounikarim</a>
+            </li>
+            <li class="icon brands fa-linkedin">
+                <a href="https://www.linkedin.com/in/abdelkarim-abdouni/">linkedin.com/in/abdelkarim-abdouni</a>
+            </li>
+            {#
+            <li class="icon solid fa-file-pdf">
+                <a href="#">Télécharger mon CV</a>
+            </li>
+            #}
+        </ul>
+    </div>
+</section>

@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+    {% for experience in experiences %}
+        {% set front = false %}
+        {{ include('_inc/_experience.html.twig') }}
+    {% endfor %}
+
+{% endblock %}
