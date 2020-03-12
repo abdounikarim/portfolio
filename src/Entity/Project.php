@@ -48,6 +48,11 @@ class Project
      */
     private $ended;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $link;
+
     public function __construct()
     {
         $this->skills = new ArrayCollection();
@@ -140,6 +145,18 @@ class Project
     public function setEnded(?\DateTimeInterface $ended): self
     {
         $this->ended = $ended;
+
+        return $this;
+    }
+
+    public function getLink(): ?string
+    {
+        return $this->link;
+    }
+
+    public function setLink(string $link): self
+    {
+        $this->link = $link;
 
         return $this;
     }

@@ -48,11 +48,21 @@ easy_admin:
 
         Project:
             class: App\Entity\Project
+            form:
+                fields:
+                    - { property: 'name'}
+                    - { property: 'description' }
+                    - { property: 'started'}
+                    - { property: 'ended'}
+                    - { property: 'link', type: 'url' }
+                    - { property: 'image'}
+                    - { property: 'skills' }
             list:
                 fields:
                     - { property: 'id'}
                     - { property: 'name'}
                     - { property: 'started'}
                     - { property: 'ended'}
+                    - { property: 'link', type: 'url' }
                     - { property: 'image', type: 'image'}
                     - { property: 'skills' }
