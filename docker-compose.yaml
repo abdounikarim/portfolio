@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+    database:
+        container_name: mysql
+        env_file: .env.local
+        image: mysql:5.7
+        ports: [3306]
+        restart: always
+        volumes:
+            - .:${SYMFONY_ROOT_DIR}:rw,cached
+        working_dir: ${SYMFONY_ROOT_DIR}
