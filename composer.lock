@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fd583ae2463f36b7d11981cdbb669119",
+    "content-hash": "c6c82fdc75ae139312628c00e829b64e",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -3782,6 +3782,59 @@
             "description": "Symfony Mailer Component",
             "homepage": "https://symfony.com",
             "time": "2020-02-08T17:00:58+00:00"
+        },
+        {
+            "name": "symfony/mailgun-mailer",
+            "version": "v5.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/mailgun-mailer.git",
+                "reference": "4f116d18c8b00fb7c2db25c0af532f587c1d4b23"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/mailgun-mailer/zipball/4f116d18c8b00fb7c2db25c0af532f587c1d4b23",
+                "reference": "4f116d18c8b00fb7c2db25c0af532f587c1d4b23",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2.5",
+                "symfony/mailer": "^4.4|^5.0"
+            },
+            "require-dev": {
+                "symfony/http-client": "^4.4|^5.0"
+            },
+            "type": "symfony-bridge",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Mailer\\Bridge\\Mailgun\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Mailgun Mailer Bridge",
+            "homepage": "https://symfony.com",
+            "time": "2020-01-31T09:13:47+00:00"
         },
         {
             "name": "symfony/mime",
