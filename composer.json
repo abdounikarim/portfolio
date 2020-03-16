@@ -71,7 +71,7 @@
             "assets:install %PUBLIC_DIR%": "symfony-cmd"
         },
         "compile": [
-            "php bin/console doctrine:migrations:migrate"
+            "php bin/console doctrine:migrations:migrate --no-interaction"
         ],
         "post-install-cmd": [
             "@auto-scripts"
