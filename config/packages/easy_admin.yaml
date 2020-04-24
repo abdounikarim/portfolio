@@ -2,26 +2,6 @@ easy_admin:
     site_name: 'Portfolio'
     entities:
         # List the entity class name you want to manage
-        Experience:
-            class: App\Entity\Experience
-            form:
-                fields:
-                    - { property: 'title'}
-                    - { property: 'started'}
-                    - { property: 'ended'}
-                    - { property: 'description'}
-                    - { property: 'skills'}
-                    - { property: 'image', type_options: { expanded: true, multiple: false }}
-
-            list:
-                fields:
-                    - { property: 'id'}
-                    - { property: 'title'}
-                    - { property: 'started'}
-                    - { property: 'ended'}
-                    - { property: 'skills'}
-                    - { property: 'image', type: 'image' }
-
         Image:
             class: App\Entity\Image
             form:
@@ -45,6 +25,26 @@ easy_admin:
                     - { property: 'id'}
                     - { property: 'name'}
                     - { property: 'image', type: 'image'}
+
+        Experience:
+            class: App\Entity\Experience
+            form:
+                fields:
+                    - { property: 'title'}
+                    - { property: 'started'}
+                    - { property: 'ended'}
+                    - { property: 'description'}
+                    - { property: 'skills'}
+                    - { property: 'image', type_options: { expanded: true, multiple: false }}
+
+            list:
+                fields:
+                    - { property: 'id'}
+                    - { property: 'title'}
+                    - { property: 'started'}
+                    - { property: 'ended'}
+                    - { property: 'skills'}
+                    - { property: 'image', type: 'image' }
 
         Project:
             class: App\Entity\Project
