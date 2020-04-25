@@ -37,7 +37,9 @@ class FrontController extends AbstractController
     public function experiences(ExperienceRepository $experienceRepository)
     {
         return $this->render('front/experiences.html.twig', [
-            'experiences' => $experienceRepository->findAll()
+            'experiences' => $experienceRepository->findBy([], [
+                'id' => 'DESC'
+            ])
         ]);
     }
 
@@ -52,7 +54,9 @@ class FrontController extends AbstractController
     public function projects(ProjectRepository $projectRepository)
     {
         return $this->render('front/projects.html.twig', [
-            'projects' => $projectRepository->findAll()
+            'projects' => $projectRepository->findBy([], [
+                'id' => 'DESC'
+            ])
         ]);
     }
 
