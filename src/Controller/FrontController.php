@@ -19,11 +19,13 @@ class FrontController extends AbstractController
     {
         $form = $this->createForm(ContactType::class);
         $form->handleRequest($request);
-        if($form->isSubmitted() && $form->isValid()) {
+        if ($form->isSubmitted() && $form->isValid()) {
             $mail->send($form->getData());
             $this->addFlash('contact', 'Votre message a bien été envoyé');
+
             return $this->redirectToRoute('front');
         }
+
         return $this->render('front/index.html.twig', [
             'experiences' => $experienceRepository->findLastThree(),
             'projects' => $projectRepository->findLastFourth(),
@@ -38,14 +40,13 @@ class FrontController extends AbstractController
     {
         return $this->render('front/experiences.html.twig', [
             'experiences' => $experienceRepository->findBy([], [
-                'id' => 'DESC'
-            ])
+                'id' => 'DESC',
+            ]),
         ]);
     }
 
     public function experience()
     {
-
     }
 
     /**
@@ -55,14 +56,13 @@ class FrontController extends AbstractController
     {
         return $this->render('front/projects.html.twig', [
             'projects' => $projectRepository->findBy([], [
-                'id' => 'DESC'
-            ])
+                'id' => 'DESC',
+            ]),
         ]);
     }
 
     public function project()
     {
-
     }
 
     /**
