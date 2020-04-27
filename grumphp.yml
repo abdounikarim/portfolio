@@ -35,11 +35,6 @@ parameters:
             ignore_patterns: []
             triggered_by: ['php']
             memory_limit: "-1"
-        phpunit:
-            config_file: ~
-            testsuite: ~
-            group: []
-            always_execute: false
         phpunitbridge:
             config_file: ~
             testsuite: ~
