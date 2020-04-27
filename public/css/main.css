@@ -4163,6 +4163,18 @@ footer .inner .copyright li a {
 .left {
     justify-content: center;
 }
+.img-icons-1, .img-icons-2 {
+    display: flex;
+}
+.img-icons-1 {
+    justify-content: flex-end;
+}
+.img-icons-1 span, .img-icons-2 span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2px;
+}
 .img-icon {
     width: 40px !important;
     padding: 0 5px;
