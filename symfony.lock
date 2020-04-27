@@ -106,6 +106,9 @@
     "egulias/email-validator": {
         "version": "2.1.17"
     },
+    "gitonomy/gitlib": {
+        "version": "v1.2.1"
+    },
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
     },
@@ -136,6 +139,9 @@
     "phpdocumentor/type-resolver": {
         "version": "1.1.0"
     },
+    "phpro/grumphp": {
+        "version": "v0.18.0"
+    },
     "psr/cache": {
         "version": "1.0.1"
     },
@@ -151,6 +157,9 @@
     "psr/log": {
         "version": "1.1.2"
     },
+    "seld/jsonlint": {
+        "version": "1.7.2"
+    },
     "sensio/framework-extra-bundle": {
         "version": "5.2",
         "recipe": {
@@ -161,6 +170,18 @@
         },
         "files": [
             "config/packages/sensio_framework_extra.yaml"
+        ]
+    },
+    "sensiolabs/security-checker": {
+        "version": "4.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "4.0",
+            "ref": "160c9b600564faa1224e8f387d49ef13ceb8b793"
+        },
+        "files": [
+            "config/packages/security_checker.yaml"
         ]
     },
     "symfony/asset": {
