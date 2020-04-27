@@ -4165,6 +4165,8 @@ footer .inner .copyright li a {
 }
 .img-icons-1, .img-icons-2 {
     display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
 }
 .img-icons-1 {
     justify-content: flex-end;
