@@ -21,38 +21,38 @@ class ContactType extends AbstractType
             ->add('name', TextType::class, [
                 'constraints' => [
                     new NotBlank([
-                        'message' => 'Merci de renseigner un nom'
+                        'message' => 'Merci de renseigner un nom',
                     ]),
                     new Length([
                         'min' => 2,
                         'max' => 255,
                         'minMessage' => 'Vous devez renseigner un minimum de 2 caractères',
-                        'maxMessage' => 'Vous devez renseigner un maximum de 255 caractères'
-                    ])
-                ]
+                        'maxMessage' => 'Vous devez renseigner un maximum de 255 caractères',
+                    ]),
+                ],
             ])
             ->add('email', EmailType::class, [
                 'constraints' => [
                     new NotBlank([
-                        'message' => 'Merci de renseigner un email'
+                        'message' => 'Merci de renseigner un email',
                     ]),
                     new Email([
-                        'message' => 'Merci de renseigner un email valide'
+                        'message' => 'Merci de renseigner un email valide',
                     ]),
                     new Length([
                         'min' => 2,
                         'max' => 255,
                         'minMessage' => 'Vous devez renseigner un minimum de 2 caractères',
-                        'maxMessage' => 'Vous devez renseigner un maximum de 255 caractères'
-                    ])
-                ]
+                        'maxMessage' => 'Vous devez renseigner un maximum de 255 caractères',
+                    ]),
+                ],
             ])
             ->add('message', TextareaType::class, [
                 'constraints' => [
                     new NotBlank([
-                        'message' => 'Merci de renseigner un message'
-                    ])
-                ]
+                        'message' => 'Merci de renseigner un message',
+                    ]),
+                ],
             ])
         ;
     }

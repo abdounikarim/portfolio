@@ -1,3 +1,6 @@
+###> friendsofphp/php-cs-fixer ###
+/.php_cs.cache
+###< friendsofphp/php-cs-fixer ###
 
 ###> symfony/framework-bundle ###
 /.env.local

@@ -2247,6 +2247,7 @@ select {
 
 textarea {
     padding: 0.75em 1em;
+    min-height: 25vh;
 }
 
 input[type="checkbox"],
@@ -3798,7 +3799,7 @@ body.is-preload #banner p {
 }
 
 .wrapper.spotlight .image {
-    border-radius: 100%;
+    /*border-radius: 100%;*/
     margin: 0 3em 2em 0;
     width: 22em;
     overflow: hidden;
@@ -3806,7 +3807,7 @@ body.is-preload #banner p {
 }
 
 .wrapper.spotlight .image img {
-    border-radius: 100%;
+    /*border-radius: 100%;*/
     width: 100%;
 }
 
@@ -4161,4 +4162,8 @@ footer .inner .copyright li a {
 }
 .left {
     justify-content: center;
+}
+.img-icon {
+    width: 40px !important;
+    padding: 0 5px;
 }

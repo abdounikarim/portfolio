@@ -20,8 +20,8 @@ class ProjectRepository extends ServiceEntityRepository
     }
 
     /**
-    * @return Project[] Returns an array of four Project objects
-    */
+     * @return Project[] Returns an array of four Project objects
+     */
     public function findLastFourth()
     {
         return $this->createQueryBuilder('p')
