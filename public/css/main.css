@@ -2247,6 +2247,7 @@ select {
 
 textarea {
     padding: 0.75em 1em;
+    min-height: 25vh;
 }
 
 input[type="checkbox"],
