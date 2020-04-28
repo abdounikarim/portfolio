@@ -3006,7 +3006,7 @@ button:disabled,
 
 .features article {
   padding: 1.75em 1.75em 0.1em 1.75em ;
-  background-color: #353849;
+  background-color: $blue-color;
   border-radius: 5px;
   margin: 1.5em 3em 1.5em 0;
   width: calc(50% - 1.5em);
@@ -3077,7 +3077,7 @@ button:disabled,
   -webkit-transition: background-color 0.2s ease-in-out;
   -ms-transition: background-color 0.2s ease-in-out;
   transition: background-color 0.2s ease-in-out;
-  background-color: rgba(53, 56, 73, 0.95);
+  background-color: $blue-color;
   height: 3.5em;
   left: 0;
   line-height: 3.5em;
@@ -3282,7 +3282,7 @@ button:disabled,
   -ms-transition: opacity 0.35s ease, -ms-transform 0.35s ease;
   transition: opacity 0.35s ease, transform 0.35s ease;
   -webkit-overflow-scrolling: touch;
-  background: #4c5c96;
+  background: $blue-color;
   border-radius: 5px;
   display: block;
   max-width: 100%;
@@ -3338,7 +3338,7 @@ button:disabled,
 }
 
 #menu .links li a:hover {
-  background: #45558d;
+  background: $black-color;
 }
 
 @media screen and (max-width: 736px) {
@@ -3630,14 +3630,6 @@ body.is-preload #banner p {
   background-color: $black-color;
 }
 
-.wrapper.spotlight:before {
-  box-shadow: inset 0 -1px 0 0 $black-color, 0 1px 0 0 $black-color;
-}
-
-.wrapper.spotlight:after {
-  box-shadow: inset 0 -1px 0 0 $black-color, 0 1px 0 0 $black-color;
-}
-
 .wrapper.spotlight .inner {
   display: -moz-flex;
   display: -webkit-flex;
@@ -3685,82 +3677,6 @@ body.is-preload #banner p {
 
 .wrapper.spotlight.style2 {
   background-color: $black-color;
-}
-
-.wrapper.spotlight.style2:before, .wrapper.spotlight.style2:after {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%2345558d%3B' /%3E%3C/svg%3E");
-}
-
-.wrapper.spotlight.style2:before {
-  box-shadow: inset 0 -1px 0 0 $black-color, 0 1px 0 0 $black-color;
-}
-
-.wrapper.spotlight.style2:after {
-  box-shadow: inset 0 -1px 0 0 #45558d, 0 1px 0 0 #45558d;
-}
-
-.wrapper.spotlight.style3 {
-  background-color: $black-color;
-}
-
-.wrapper.spotlight.style3:before, .wrapper.spotlight.style3:after {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%233f4e85%3B' /%3E%3C/svg%3E");
-}
-
-.wrapper.spotlight.style3:before {
-  box-shadow: inset 0 -1px 0 0 $black-color, 0 1px 0 0 $black-color;
-}
-
-.wrapper.spotlight.style3:after {
-  box-shadow: inset 0 -1px 0 0 $black-color, 0 1px 0 0 $black-color;
-}
-
-.wrapper.spotlight.style4 {
-  background-color: #39477c;
-}
-
-.wrapper.spotlight.style4:before, .wrapper.spotlight.style4:after {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%2339477c%3B' /%3E%3C/svg%3E");
-}
-
-.wrapper.spotlight.style4:before {
-  box-shadow: inset 0 -1px 0 0 #39477c, 0 1px 0 0 #39477c;
-}
-
-.wrapper.spotlight.style4:after {
-  box-shadow: inset 0 -1px 0 0 #39477c, 0 1px 0 0 #39477c;
-}
-
-.wrapper.spotlight.style5 {
-  background-color: #324072;
-}
-
-.wrapper.spotlight.style5:before, .wrapper.spotlight.style5:after {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23324072%3B' /%3E%3C/svg%3E");
-}
-
-.wrapper.spotlight.style5:before {
-  box-shadow: inset 0 -1px 0 0 #324072, 0 1px 0 0 #324072;
-}
-
-.wrapper.spotlight.style5:after {
-  box-shadow: inset 0 -1px 0 0 #324072, 0 1px 0 0 #324072;
-}
-
-.wrapper.spotlight.style6 {
-  background-color: #2d3a69;
-}
-
-.wrapper.spotlight.style6:before, .wrapper.spotlight.style6:after {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%232d3a69%3B' /%3E%3C/svg%3E");
-}
-
-.wrapper.spotlight.style6:before {
-  box-shadow: inset 0 -1px 0 0 #2d3a69, 0 1px 0 0 #2d3a69;
-}
-
-.wrapper.spotlight.style6:after {
-  box-shadow: inset 0 -1px 0 0 #2d3a69, 0 1px 0 0 #2d3a69;
 }
 
 @media screen and (max-width: 980px) {
