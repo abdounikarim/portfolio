@@ -121,6 +121,9 @@
             ".php_cs.dist"
         ]
     },
+    "friendsoftwig/twigcs": {
+        "version": "v4.0-beta4"
+    },
     "gitonomy/gitlib": {
         "version": "v1.2.1"
     },

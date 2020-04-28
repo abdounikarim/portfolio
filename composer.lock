@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7d8a9a374e3c57db5d9254ddb97c90e0",
+    "content-hash": "75927a331ff34c7bb095ebd5acf45b26",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1356,6 +1356,50 @@
                 "validator"
             ],
             "time": "2020-02-13T22:36:52+00:00"
+        },
+        {
+            "name": "friendsoftwig/twigcs",
+            "version": "v4.0-BETA4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/friendsoftwig/twigcs.git",
+                "reference": "88012468d88b097e991fb8dbd4b39ed82632ec8e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/friendsoftwig/twigcs/zipball/88012468d88b097e991fb8dbd4b39ed82632ec8e",
+                "reference": "88012468d88b097e991fb8dbd4b39ed82632ec8e",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0",
+                "symfony/console": "^3.4 || ^4.3 || ^5.0",
+                "symfony/finder": "^3.4 || ^4.3 || ^5.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.5 || ^7.2"
+            },
+            "bin": [
+                "bin/twigcs"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FriendsOfTwig\\Twigcs\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tristan Maindron",
+                    "email": "tmaindron@gmail.com"
+                }
+            ],
+            "description": "Checkstyle automation for Twig",
+            "time": "2020-02-27T16:06:06+00:00"
         },
         {
             "name": "jdorn/sql-formatter",
@@ -8736,7 +8780,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "friendsoftwig/twigcs": 10
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

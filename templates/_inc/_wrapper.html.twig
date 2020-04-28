@@ -6,8 +6,9 @@
         </div>
     </div>
     {% for experience in experiences %}
-        {% set front = true %}
-        {{ include('_inc/_experience.html.twig') }}
+        {{ include('_inc/_experience.html.twig', {
+            front: true
+        }) }}
     {% endfor %}
 
     {{ include('_inc/_portfolio.html.twig', {

@@ -3,8 +3,9 @@
 {% block content %}
 
     {% for experience in experiences %}
-        {% set front = false %}
-        {{ include('_inc/_experience.html.twig') }}
+        {{ include('_inc/_experience.html.twig', {
+            front: false
+        }) }}
     {% endfor %}
 
 {% endblock %}
