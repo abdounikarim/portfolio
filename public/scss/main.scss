@@ -1,5 +1,5 @@
 @import '_fonts.scss';
-@import url(fontawesome-all.min.css);
+@import url('../css/fontawesome-all.min.css');
 @import url("https://fonts.googleapis.com/css?family=Raleway:200,700|Source+Sans+Pro:300,600,300italic,600italic");
 
 /*
@@ -2864,7 +2864,7 @@ button,
   -webkit-transition: background-color 0.2s ease-in-out;
   -ms-transition: background-color 0.2s ease-in-out;
   transition: background-color 0.2s ease-in-out;
-  background-color: transparent;
+  background-color: $blue-color;
   border-radius: 5px;
   border: 0;
   box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.125);
@@ -3380,6 +3380,7 @@ body.is-menu-visible #menu .inner {
 
 #banner {
   padding: 10em 0 4.75em 0 ;
+  background-color: $blue-color;
 }
 
 #banner .inner {
@@ -3465,8 +3466,7 @@ body.is-menu-visible #menu .inner {
 @media screen and (max-width: 1280px) {
 
   #banner {
-    padding: 7em 0 8.25em 0 ;
-    background-color: $black-color;
+    padding: 7em 0 8.25em 0;
     margin-bottom: -6.5em;
   }
 
@@ -3813,8 +3813,8 @@ body.is-preload #banner p {
 footer .inner .copyright {
   border-top: solid 2px rgba(255, 255, 255, 0.125);
   list-style: none;
-  margin: 4em 0 2em 0;
-  padding: 2em 0 0 0;
+  margin: 4em 0 0 0;
+  padding: 2em 0;
   width: 100%;
   text-align: center;
 }
@@ -3863,7 +3863,7 @@ footer .inner .copyright li a {
   }
 
   footer .inner .copyright {
-    margin: 4em 0 2em 0;
+    margin: 4em 0 0 0;
   }
 
 }
@@ -3938,4 +3938,7 @@ footer .inner .copyright li a {
 .img-icon {
   width: 40px !important;
   padding: 0 5px;
+}
+footer {
+  background-color: $blue-color;
 }
