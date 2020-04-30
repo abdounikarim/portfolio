@@ -11,7 +11,7 @@ parameters:
         phpcsfixer2:
             allow_risky: ~
             cache_file: ~
-            config: ~
+            config: '.php_cs.dist'
             rules:
                 '@Symfony': true
                 line_ending: false
@@ -32,7 +32,7 @@ parameters:
             configuration: ~
             level: 0
             force_patterns: []
-            ignore_patterns: []
+            ignore_patterns: ['/^tests/']
             triggered_by: ['php']
             memory_limit: "-1"
         phpunitbridge:

@@ -1,10 +1,8 @@
 <!-- Wrapper -->
 <div id="wrapper">
-    <div class="wrapper">
-        <div class="inner">
-            <h2 class="major">Expériences</h2>
-        </div>
-    </div>
+
+    {{ include('_inc/_experience_title.html.twig') }}
+
     {% for experience in experiences %}
         {{ include('_inc/_experience.html.twig', {
             front: true

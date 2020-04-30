@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
-
+    {{ include('_inc/_experience_title.html.twig') }}
     {% for experience in experiences %}
         {{ include('_inc/_experience.html.twig', {
             front: false
