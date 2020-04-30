@@ -3783,11 +3783,11 @@ footer .inner .copyright li a {
 }
 
 .img-icons-1 {
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 .img-icons-2 {
-  justify-content: flex-start;
+  justify-content: flex-end;
 }
 
 .img-icons-1 span, .img-icons-2 span {
