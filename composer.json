@@ -11,7 +11,6 @@
         "friendsoftwig/twigcs": "v4.0-BETA4",
         "phpstan/phpstan-phpunit": "^0.12.8",
         "sensio/framework-extra-bundle": "^5.1",
-        "symfony/apache-pack": "^1.0",
         "symfony/asset": "5.0.*",
         "symfony/console": "5.0.*",
         "symfony/dotenv": "5.0.*",
@@ -78,12 +77,8 @@
     "scripts": {
         "auto-scripts": {
             "cache:clear": "symfony-cmd",
-            "assets:install %PUBLIC_DIR%": "symfony-cmd",
-            "security-checker security:check": "script"
+            "assets:install %PUBLIC_DIR%": "symfony-cmd"
         },
-        "compile": [
-            "php bin/console doctrine:migrations:migrate --no-interaction"
-        ],
         "post-install-cmd": [
             "@auto-scripts"
         ],
