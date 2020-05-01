@@ -25,7 +25,7 @@ parameters:
         phpmd:
             whitelist_patterns: []
             exclude: []
-            ruleset: ['cleancode', 'codesize', 'naming']
+            ruleset: ['cleancode', 'codesize']
             triggered_by: ['php']
         phpstan:
             autoload_file: ~
