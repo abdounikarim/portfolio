@@ -47,7 +47,7 @@ Tests
 Execute this command to run tests:
 
 ```bash
-$ cd my_project/
+$ cd portfolio/
 $ ./bin/phpunit
 ```
 
