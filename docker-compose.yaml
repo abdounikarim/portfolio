@@ -1,0 +1,68 @@
+version: '3.7'
+
+services:
+
+    blackfire:
+        container_name: blackfire
+        env_file: .env.local
+        image: blackfire/blackfire
+
+    database:
+        container_name: mysql
+        env_file: .env.local
+        image: mysql:5.7
+        ports:
+            - ${MYSQL_PORT}:3306
+        restart: always
+        volumes:
+            - .:${SYMFONY_ROOT_DIR}:rw,cached
+        working_dir: ${SYMFONY_ROOT_DIR}
+
+    nginx:
+        container_name: nginx
+        env_file: .env.local
+        image: nginx
+        links:
+            - php
+        ports:
+            - ${NGINX_PORT}:80
+        restart: always
+        volumes:
+            - .:${SYMFONY_ROOT_DIR}:rw,cached
+            - ./docker/nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf:rw,cached
+        working_dir: ${SYMFONY_ROOT_DIR}
+
+    php:
+        build: docker/php
+        container_name: php
+        depends_on:
+            - database
+        env_file: .env.local
+        links:
+            - database
+        ports:
+            - ${PHP_PORT}:9000
+        restart: always
+        volumes:
+            - .:${SYMFONY_ROOT_DIR}:rw,cached
+        working_dir: ${SYMFONY_ROOT_DIR}
+
+    phpmyadmin:
+        container_name: phpmyadmin
+        env_file: .env.local
+        image: phpmyadmin/phpmyadmin
+        ports:
+            - ${PHPMYADMIN_PORT}:80
+        restart: always
+        volumes:
+            - /sessions
+
+    varnish:
+        build: docker/varnish
+        container_name: varnish
+        depends_on:
+            - nginx
+        env_file: .env.local
+        ports:
+            - ${VARNISH_PORT}:80
+        restart: always
