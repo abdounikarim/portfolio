@@ -1,4 +1,6 @@
 {
+    "name": "abdounikarim/portfolio",
+    "description": "my portfolio",
     "type": "project",
     "license": "proprietary",
     "require": {
@@ -6,6 +8,8 @@
         "ext-ctype": "*",
         "ext-iconv": "*",
         "easycorp/easyadmin-bundle": "^2.3",
+        "friendsoftwig/twigcs": "v4.0-BETA4",
+        "phpstan/phpstan-phpunit": "^0.12.8",
         "sensio/framework-extra-bundle": "^5.1",
         "symfony/asset": "5.0.*",
         "symfony/console": "5.0.*",
@@ -33,10 +37,16 @@
         "symfony/yaml": "5.0.*"
     },
     "require-dev": {
+        "doctrine/doctrine-fixtures-bundle": "^3.3",
+        "friendsofphp/php-cs-fixer": "^2.16",
+        "phpmd/phpmd": "^2.8",
+        "phpro/grumphp": "^0.18.0",
+        "phpstan/phpstan": "^0.12.19",
+        "sensiolabs/security-checker": "^6.0",
         "symfony/debug-pack": "*",
         "symfony/maker-bundle": "^1.0",
         "symfony/profiler-pack": "*",
-        "symfony/test-pack": "*"
+        "symfony/test-pack": "^1.0"
     },
     "config": {
         "preferred-install": {

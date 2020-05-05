@@ -1358,6 +1358,50 @@
             "time": "2020-02-13T22:36:52+00:00"
         },
         {
+            "name": "friendsoftwig/twigcs",
+            "version": "v4.0-BETA4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/friendsoftwig/twigcs.git",
+                "reference": "88012468d88b097e991fb8dbd4b39ed82632ec8e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/friendsoftwig/twigcs/zipball/88012468d88b097e991fb8dbd4b39ed82632ec8e",
+                "reference": "88012468d88b097e991fb8dbd4b39ed82632ec8e",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0",
+                "symfony/console": "^3.4 || ^4.3 || ^5.0",
+                "symfony/finder": "^3.4 || ^4.3 || ^5.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.5 || ^7.2"
+            },
+            "bin": [
+                "bin/twigcs"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FriendsOfTwig\\Twigcs\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tristan Maindron",
+                    "email": "tmaindron@gmail.com"
+                }
+            ],
+            "description": "Checkstyle automation for Twig",
+            "time": "2020-02-27T16:06:06+00:00"
+        },
+        {
             "name": "jdorn/sql-formatter",
             "version": "v1.2.17",
             "source": {
@@ -2027,6 +2071,118 @@
             ],
             "description": "A PSR-5 based resolver of Class names, Types and Structural Element Names",
             "time": "2020-02-18T18:59:58+00:00"
+        },
+        {
+            "name": "phpstan/phpstan",
+            "version": "0.12.19",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpstan/phpstan.git",
+                "reference": "054f6d76b12ba9a6c13a5a8d5fcdf51219615f4d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/054f6d76b12ba9a6c13a5a8d5fcdf51219615f4d",
+                "reference": "054f6d76b12ba9a6c13a5a8d5fcdf51219615f4d",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1"
+            },
+            "conflict": {
+                "phpstan/phpstan-shim": "*"
+            },
+            "bin": [
+                "phpstan",
+                "phpstan.phar"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.12-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "PHPStan - PHP Static Analysis Tool",
+            "funding": [
+                {
+                    "url": "https://github.com/ondrejmirtes",
+                    "type": "github"
+                },
+                {
+                    "url": "https://www.patreon.com/phpstan",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/phpstan/phpstan",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-04-19T20:35:10+00:00"
+        },
+        {
+            "name": "phpstan/phpstan-phpunit",
+            "version": "0.12.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpstan/phpstan-phpunit.git",
+                "reference": "7232c17e2493dc598173da784477ce0afb2c4e0e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpstan/phpstan-phpunit/zipball/7232c17e2493dc598173da784477ce0afb2c4e0e",
+                "reference": "7232c17e2493dc598173da784477ce0afb2c4e0e",
+                "shasum": ""
+            },
+            "require": {
+                "php": "~7.1",
+                "phpstan/phpstan": "^0.12.6"
+            },
+            "conflict": {
+                "phpunit/phpunit": "<7.0"
+            },
+            "require-dev": {
+                "consistence/coding-standard": "^3.5",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.4.4",
+                "ergebnis/composer-normalize": "^2.0.2",
+                "jakub-onderka/php-parallel-lint": "^1.0",
+                "phing/phing": "^2.16.0",
+                "phpstan/phpstan-strict-rules": "^0.12",
+                "phpunit/phpunit": "^7.0",
+                "satooshi/php-coveralls": "^1.0",
+                "slevomat/coding-standard": "^4.7.2"
+            },
+            "type": "phpstan-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.12-dev"
+                },
+                "phpstan": {
+                    "includes": [
+                        "extension.neon",
+                        "rules.neon"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PHPStan\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "PHPUnit extensions and rules for PHPStan",
+            "time": "2020-04-17T08:04:10+00:00"
         },
         {
             "name": "psr/cache",
@@ -7226,6 +7382,11 @@
                 "phpunit/phpunit": "^4.8.36 || ^7.5.13"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Webmozart\\Assert\\": "src/"
@@ -7266,40 +7427,32 @@
                 "shasum": ""
             },
             "require": {
-                "ext-tokenizer": "*",
-                "php": ">=7.0"
+                "php": "^5.3.2 || ^7.0 || ^8.0",
+                "psr/log": "^1.0"
             },
             "require-dev": {
-                "ircmaxell/php-yacc": "0.0.5",
-                "phpunit/phpunit": "^6.5 || ^7.0 || ^8.0"
+                "phpunit/phpunit": "^4.8.35 || ^5.7 || 6.5 - 8"
             },
-            "bin": [
-                "bin/php-parse"
-            ],
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.3-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
-                    "PhpParser\\": "lib/PhpParser"
+                    "Composer\\XdebugHandler\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "BSD-3-Clause"
+                "MIT"
             ],
             "authors": [
                 {
-                    "name": "Nikita Popov"
+                    "name": "John Stevenson",
+                    "email": "john-stevenson@blueyonder.co.uk"
                 }
             ],
-            "description": "A PHP parser written in PHP",
+            "description": "Restarts a process without Xdebug.",
             "keywords": [
-                "parser",
-                "php"
+                "Xdebug",
+                "performance"
             ],
             "time": "2020-04-10T16:34:50+00:00"
         },
@@ -7318,31 +7471,37 @@
                 "shasum": ""
             },
             "require": {
-                "php": "^7.2.5",
-                "symfony/dom-crawler": "^4.4|^5.0"
+                "doctrine/common": "^2.11",
+                "doctrine/persistence": "^1.3.3",
+                "php": "^7.2"
+            },
+            "conflict": {
+                "doctrine/phpcr-odm": "<1.3.0"
             },
             "require-dev": {
-                "symfony/css-selector": "^4.4|^5.0",
-                "symfony/http-client": "^4.4|^5.0",
-                "symfony/mime": "^4.4|^5.0",
-                "symfony/process": "^4.4|^5.0"
+                "alcaeus/mongo-php-adapter": "^1.1",
+                "doctrine/coding-standard": "^6.0",
+                "doctrine/dbal": "^2.5.4",
+                "doctrine/mongodb-odm": "^1.3.0",
+                "doctrine/orm": "^2.7.0",
+                "phpunit/phpunit": "^7.0"
             },
             "suggest": {
-                "symfony/process": ""
+                "alcaeus/mongo-php-adapter": "For using MongoDB ODM with PHP 7",
+                "doctrine/mongodb-odm": "For loading MongoDB ODM fixtures",
+                "doctrine/orm": "For loading ORM fixtures",
+                "doctrine/phpcr-odm": "For loading PHPCR ODM fixtures"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "5.0-dev"
+                    "dev-master": "1.4.x-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "Symfony\\Component\\BrowserKit\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
+                    "Doctrine\\Common\\DataFixtures\\": "lib/Doctrine/Common/DataFixtures"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -7350,12 +7509,8 @@
             ],
             "authors": [
                 {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
                 }
             ],
             "description": "Symfony BrowserKit Component",
@@ -7391,21 +7546,32 @@
                 "shasum": ""
             },
             "require": {
-                "php": "^7.2.5"
+                "doctrine/data-fixtures": "^1.3",
+                "doctrine/doctrine-bundle": "^1.11|^2.0",
+                "doctrine/orm": "^2.6.0",
+                "doctrine/persistence": "^1.3",
+                "php": "^7.1",
+                "symfony/config": "^3.4|^4.3|^5.0",
+                "symfony/console": "^3.4|^4.3|^5.0",
+                "symfony/dependency-injection": "^3.4|^4.3|^5.0",
+                "symfony/doctrine-bridge": "^3.4|^4.1|^5.0",
+                "symfony/http-kernel": "^3.4|^4.3|^5.0"
             },
-            "type": "library",
+            "require-dev": {
+                "doctrine/coding-standard": "^6.0",
+                "phpunit/phpunit": "^7.4",
+                "symfony/phpunit-bridge": "^4.1|^5.0"
+            },
+            "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "5.0-dev"
+                    "dev-master": "3.3.x-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "Symfony\\Component\\CssSelector\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
+                    "Doctrine\\Bundle\\FixturesBundle\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -7417,12 +7583,12 @@
                     "email": "fabien@symfony.com"
                 },
                 {
-                    "name": "Jean-François Simon",
-                    "email": "jeanfrancois.simon@sensiolabs.com"
+                    "name": "Doctrine Project",
+                    "homepage": "http://www.doctrine-project.org"
                 },
                 {
                     "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
+                    "homepage": "http://symfony.com/contributors"
                 }
             ],
             "description": "Symfony CssSelector Component",
@@ -7458,37 +7624,63 @@
                 "shasum": ""
             },
             "require": {
-                "ext-xml": "*",
-                "php": "^7.2.5",
-                "symfony/http-kernel": "^4.4|^5.0",
-                "symfony/twig-bridge": "^4.4|^5.0",
-                "symfony/var-dumper": "^4.4|^5.0"
-            },
-            "conflict": {
-                "symfony/config": "<4.4",
-                "symfony/dependency-injection": "<4.4"
+                "composer/semver": "^1.4",
+                "composer/xdebug-handler": "^1.2",
+                "doctrine/annotations": "^1.2",
+                "ext-json": "*",
+                "ext-tokenizer": "*",
+                "php": "^5.6 || ^7.0",
+                "php-cs-fixer/diff": "^1.3",
+                "symfony/console": "^3.4.17 || ^4.1.6 || ^5.0",
+                "symfony/event-dispatcher": "^3.0 || ^4.0 || ^5.0",
+                "symfony/filesystem": "^3.0 || ^4.0 || ^5.0",
+                "symfony/finder": "^3.0 || ^4.0 || ^5.0",
+                "symfony/options-resolver": "^3.0 || ^4.0 || ^5.0",
+                "symfony/polyfill-php70": "^1.0",
+                "symfony/polyfill-php72": "^1.4",
+                "symfony/process": "^3.0 || ^4.0 || ^5.0",
+                "symfony/stopwatch": "^3.0 || ^4.0 || ^5.0"
             },
             "require-dev": {
-                "symfony/config": "^4.4|^5.0",
-                "symfony/dependency-injection": "^4.4|^5.0",
-                "symfony/web-profiler-bundle": "^4.4|^5.0"
+                "johnkary/phpunit-speedtrap": "^1.1 || ^2.0 || ^3.0",
+                "justinrainbow/json-schema": "^5.0",
+                "keradus/cli-executor": "^1.2",
+                "mikey179/vfsstream": "^1.6",
+                "php-coveralls/php-coveralls": "^2.1",
+                "php-cs-fixer/accessible-object": "^1.0",
+                "php-cs-fixer/phpunit-constraint-isidenticalstring": "^1.1",
+                "php-cs-fixer/phpunit-constraint-xmlmatchesxsd": "^1.1",
+                "phpunit/phpunit": "^5.7.27 || ^6.5.14 || ^7.1",
+                "phpunitgoodpractices/traits": "^1.8",
+                "symfony/phpunit-bridge": "^4.3 || ^5.0",
+                "symfony/yaml": "^3.0 || ^4.0 || ^5.0"
             },
             "suggest": {
-                "symfony/config": "For service container configuration",
-                "symfony/dependency-injection": "For using as a service from the container"
+                "ext-dom": "For handling output formats in XML",
+                "ext-mbstring": "For handling non-UTF8 characters in cache signature.",
+                "php-cs-fixer/phpunit-constraint-isidenticalstring": "For IsIdenticalString constraint.",
+                "php-cs-fixer/phpunit-constraint-xmlmatchesxsd": "For XmlMatchesXsd constraint.",
+                "symfony/polyfill-mbstring": "When enabling `ext-mbstring` is not possible."
             },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "5.0-dev"
-                }
-            },
+            "bin": [
+                "php-cs-fixer"
+            ],
+            "type": "application",
             "autoload": {
                 "psr-4": {
-                    "Symfony\\Bundle\\DebugBundle\\": ""
+                    "PhpCsFixer\\": "src/"
                 },
-                "exclude-from-classmap": [
-                    "/Tests/"
+                "classmap": [
+                    "tests/Test/AbstractFixerTestCase.php",
+                    "tests/Test/AbstractIntegrationCaseFactory.php",
+                    "tests/Test/AbstractIntegrationTestCase.php",
+                    "tests/Test/Assert/AssertTokensTrait.php",
+                    "tests/Test/IntegrationCase.php",
+                    "tests/Test/IntegrationCaseFactory.php",
+                    "tests/Test/IntegrationCaseFactoryInterface.php",
+                    "tests/Test/InternalIntegrationCaseFactory.php",
+                    "tests/Test/IsIdenticalConstraint.php",
+                    "tests/TestCase.php"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -7501,8 +7693,8 @@
                     "email": "fabien@symfony.com"
                 },
                 {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
+                    "name": "Dariusz Rumiński",
+                    "email": "dariusz.ruminski@gmail.com"
                 }
             ],
             "description": "Symfony DebugBundle",
@@ -7544,7 +7736,6 @@
                 "symfony/profiler-pack": "*",
                 "symfony/var-dumper": "*"
             },
-            "type": "symfony-pack",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
@@ -7941,7 +8132,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "friendsoftwig/twigcs": 10
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

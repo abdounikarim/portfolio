@@ -1,3 +1,0 @@
-mysql_set_password_root: "{{ vault_mysql_root_password }}"
-php_version: 7.4
-symfony_projects_dir: /var/www/projects
