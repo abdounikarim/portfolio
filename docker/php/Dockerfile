@@ -1,5 +1,5 @@
 FROM    composer:1.8 as composer
-FROM    php:7.3-fpm-alpine
+FROM    php:7.4-fpm-alpine
 
 COPY    --from=composer /usr/bin/composer /usr/local/bin/composer
 
@@ -39,10 +39,10 @@ RUN     apk add --update --no-cache \
 # Images libraries
 RUN apk add --no-cache freetype libpng libjpeg-turbo freetype-dev libpng-dev libjpeg-turbo-dev libwebp-dev
 RUN docker-php-ext-configure gd \
-  --with-jpeg-dir=/usr/lib \
-  --with-webp-dir=/usr/lib \
-  --with-freetype-dir=/usr/include/freetype2 && \
-  docker-php-ext-install gd
+  #--with-jpeg-dir=/usr/lib \
+  #--with-webp-dir=/usr/lib \
+  #--with-freetype-dir=/usr/include/freetype2 && \
+  && docker-php-ext-install gd
 
 # Blackfire
 ENV current_os=alpine
@@ -58,3 +58,6 @@ RUN version=$(php -r "echo PHP_MAJOR_VERSION.PHP_MINOR_VERSION;") \
 COPY    conf.d/php.ini /usr/local/etc/php
 COPY    conf.d/symfony.ini /usr/local/etc/php/conf.d
 
+# Entrypoint
+COPY    ./bin/entrypoint.sh /usr/local/bin/entrypoint
+ENTRYPOINT ["/usr/local/bin/entrypoint"]
