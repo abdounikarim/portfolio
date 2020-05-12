@@ -39,9 +39,9 @@ RUN     apk add --update --no-cache \
 # Images libraries
 RUN apk add --no-cache freetype libpng libjpeg-turbo freetype-dev libpng-dev libjpeg-turbo-dev libwebp-dev
 RUN docker-php-ext-configure gd \
-  #--with-jpeg-dir=/usr/lib \
-  #--with-webp-dir=/usr/lib \
-  #--with-freetype-dir=/usr/include/freetype2 && \
+  --with-jpeg \
+  --with-webp \
+  --with-freetype \
   && docker-php-ext-install gd
 
 # Blackfire
