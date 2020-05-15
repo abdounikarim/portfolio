@@ -13,30 +13,25 @@ export default class Form extends Component {
                 <div className="inner">
                     <h2 className="major">Contact</h2>
                     <p>Vous souhaitez que je participe à l'un de vos projets ? Vous êtes intéressés par mon profil ? Vous avez une question ? N'hésitez pas à me contacter, je vous réponds dans les plus brefs délais.</p>
-                    {/*
-                    {{ form_start(form) }}
-                    <div className="fields">
-                        <div className="field">
-                            {{ form_row(form.name, {
-                                label: 'Votre nom'
-                            }) }}
+                    <form name="contact" method="post">
+                        <div className="fields">
+                            <div className="field">
+                                <label htmlFor="contact_name" className="required">Votre nom</label>
+                                <input type="text" id="contact_name" name="contact[name]" required="required" />
+                            </div>
+                            <div className="field">
+                                <label htmlFor="contact_email" className="required">Votre email</label>
+                                <input type="email" id="contact_email" name="contact[email]" required="required" />
+                            </div>
+                            <div className="field">
+                                <label htmlFor="contact_message" className="required">Votre message</label>
+                                <textarea id="contact_message" name="contact[message]" required="required"></textarea>
+                            </div>
                         </div>
-                        <div className="field">
-                            {{ form_row(form.email, {
-                                label: 'Votre email'
-                            }) }}
-                        </div>
-                        <div className="field">
-                            {{ form_row(form.message, {
-                                label: 'Votre message'
-                            }) }}
-                        </div>
-                    </div>
-                    <ul className="actions">
-                        <li><input type="submit" value="Envoyer" /></li>
-                    </ul>
-                    {{ form_end(form) }}
-                    */}
+                        <ul className="actions">
+                            <li><input type="submit" value="Envoyer" /></li>
+                        </ul>
+                    </form>
                     <ul className="contact">
                         <li>
                             <FontAwesomeIcon icon={faPhone} className="icon" />
