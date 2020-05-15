@@ -7,8 +7,14 @@
 
 // any CSS you import will output into a single css file (app.css in this case)
 import '../css/app.css';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {BrowserRouter as Router} from "react-router-dom";
+import Header from "./_inc/Header";
+import Routing from "./config/Routing";
+import Footer from "./_inc/Footer";
 
 // Need jQuery? Install it with "yarn add jquery", then uncomment to import it.
 // import $ from 'jquery';
 
-console.log('Hello Webpack Encore! Edit me in assets/js/app.js');
+ReactDOM.render(<Routing />, document.getElementById('app'));
