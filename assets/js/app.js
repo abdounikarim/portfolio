@@ -13,10 +13,6 @@ import ReactDOM from 'react-dom';
 import Routing from "./config/Routing";
 
 // Need jQuery? Install it with "yarn add jquery", then uncomment to import it.
-import $ from 'jquery';
-import 'jquery.scrollex';
-import '../js/lib/browser.min';
-import '../js/lib/util';
 import '../js/lib/main';
 
 ReactDOM.render(<Routing />, document.getElementById('page-wrapper'));
