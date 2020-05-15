@@ -3,6 +3,8 @@
         "@babel/preset-react": "^7.9.4",
         "@symfony/webpack-encore": "^0.29.0",
         "core-js": "^3.0.0",
+        "jquery": "^3.5.1",
+        "jquery.scrollex": "^0.2.1",
         "react-router-dom": "^5.2.0",
         "regenerator-runtime": "^0.13.2",
         "webpack-notifier": "^1.6.0"

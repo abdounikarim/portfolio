@@ -1,3 +1,9 @@
+import $ from 'jquery';
+import 'jquery.scrollex';
+import breakpoints from './breakpoints.min';
+import './browser.min';
+import './util';
+
 /*
 	Solid State by HTML5 UP
 	html5up.net | @ajlkn
