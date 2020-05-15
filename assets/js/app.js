@@ -15,4 +15,4 @@ import Routing from "./config/Routing";
 // Need jQuery? Install it with "yarn add jquery", then uncomment to import it.
 // import $ from 'jquery';
 
-ReactDOM.render(<Routing />, document.getElementById('app'));
+ReactDOM.render(<Routing />, document.getElementById('page-wrapper'));
