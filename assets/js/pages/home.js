@@ -3,6 +3,8 @@ import Header from "../_inc/Header";
 import Footer from "../_inc/Footer";
 import Nav from "../_inc/Nav";
 import Banner from "../_inc/Banner";
+import Wrapper from "../_inc/Wrapper";
+import Form from "../_inc/Form";
 
 export default class Home extends Component {
     render() {
@@ -11,7 +13,8 @@ export default class Home extends Component {
                 <Header />
                 <Nav />
                 <Banner />
-                    <div>Home page</div>
+                <Wrapper />
+                <Form />
                 <Footer />
             </div>
         );

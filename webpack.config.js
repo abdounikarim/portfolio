@@ -69,6 +69,10 @@ Encore
     // uncomment if you use API Platform Admin (composer req api-admin)
     .enableReactPreset()
     //.addEntry('admin', './assets/js/admin.js')
+    .addLoader({
+        test: /\.(pdf)$/,
+        loader: 'file-loader'
+    })
 ;
 
 module.exports = Encore.getWebpackConfig();

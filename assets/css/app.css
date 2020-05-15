@@ -2610,7 +2610,7 @@ ul.contact li {
     position: relative;
 }
 
-ul.contact li:before {
+ul.contact .icon {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     display: inline-block;
@@ -2623,18 +2623,18 @@ ul.contact li:before {
     font-weight: 400;
 }
 
-ul.contact li:before {
+ul.contact .icon {
     border-radius: 100%;
     border: solid 2px rgba(255, 255, 255, 0.125);
     display: inline-block;
-    font-size: 0.8em;
     height: 2.5em;
     left: 0;
     line-height: 2.35em;
     position: absolute;
     text-align: center;
-    top: 0;
+    top: -5px;
     width: 2.5em;
+    padding: 8px;
 }
 
 ul.contact li:first-child {

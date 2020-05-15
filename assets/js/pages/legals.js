@@ -436,6 +436,7 @@ export default class Legals extends Component {
                             aux tribunaux compétents de La Roche sur Yon</p>
                     </div>
                 </section>
+                {/*{{ include('_inc/_back_to_front.html.twig') }}*/}
                 <Footer />
             </div>
         );

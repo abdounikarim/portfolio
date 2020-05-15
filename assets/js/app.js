@@ -6,7 +6,6 @@
  */
 
 // any CSS you import will output into a single css file (app.css in this case)
-import '@fortawesome/react-fontawesome';
 import '../css/app.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
