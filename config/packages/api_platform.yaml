@@ -1,7 +1,12 @@
 api_platform:
+    enable_docs: true
     mapping:
         paths: ['%kernel.project_dir%/src/Entity']
     patch_formats:
         json: ['application/merge-patch+json']
     swagger:
         versions: [3]
+    collection:
+        pagination:
+            client_items_per_page: true # Disabled by default
+            items_per_page_parameter_name: itemsPerPage # Default value
