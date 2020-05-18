@@ -7,10 +7,8 @@ export default class Experience extends Component {
     render() {
         const { experience, front, index } = this.props;
 
-        console.log(index);
-
         return (
-            <section className="wrapper spotlight {{ loop.index is divisible by (2) ? 'alt style2' : 'style1' }}">
+            <section className={ index % 2 === 0 ? "wrapper spotlight alt style2" : "wrapper spotlight style1"}>
                 <div className="inner">
                     <a href="#" className="image">
                         <img src={experience.image.name} alt={experience.image.alt} />
@@ -24,7 +22,7 @@ export default class Experience extends Component {
                         { front === false &&
                             <div className="skills">
                                 <p><b><i>Compétences</i></b></p>
-                                <p className="img-icons-{{ loop.index is divisible by (2) ? '2' : '1' }}">
+                                <p className={index % 2 === 0 ? "img-icons-2" : "img-icons-1"}>
                                     {/*
                                     {% for skill in experience.skills %}
                                         <span>
