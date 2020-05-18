@@ -5,7 +5,9 @@ export default class Experience extends Component {
         super(props);
     }
     render() {
-        const { experience, front } = this.props;
+        const { experience, front, index } = this.props;
+
+        console.log(index);
 
         return (
             <section className="wrapper spotlight {{ loop.index is divisible by (2) ? 'alt style2' : 'style1' }}">
@@ -36,15 +38,13 @@ export default class Experience extends Component {
                         }
                     </div>
                 </div>
-                {/*
-                {% if loop.index is same as(3) and front %}
-                <div className="inner left">
-                    <ul className="actions center">
-                        <li><a href="{{ path('experiences') }}" className="button">Toutes les expériences</a></li>
-                    </ul>
-                </div>
-                {% endif %}
-                */}
+                { index === 2 && front === true &&
+                    <div className="inner left">
+                        <ul className="actions center">
+                            <li><a href="#" className="button">Toutes les expériences</a></li>
+                        </ul>
+                    </div>
+                }
             </section>
         );
     }

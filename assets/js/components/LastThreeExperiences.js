@@ -26,8 +26,8 @@ export default class LastThreeExperiences extends Component {
         return (
             <div id="wrapper">
                 { this.state.experiences.length > 0 && (
-                    this.state.experiences.map((experience) => (
-                        <Experience experience={experience} key={experience.id} front={true} />
+                    this.state.experiences.map((experience, index) => (
+                        <Experience experience={experience} key={experience.id} front={true} index={index} />
                     ))
                 )}
 
