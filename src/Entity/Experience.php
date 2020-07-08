@@ -56,6 +56,7 @@ class Experience
 
     /**
      * @ORM\ManyToMany(targetEntity="App\Entity\Skill", inversedBy="experiences")
+     * @Groups("experience:collection:get")
      */
     private $skills;
 

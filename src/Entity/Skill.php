@@ -6,6 +6,7 @@ use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\SkillRepository")
@@ -32,11 +33,13 @@ class Skill
 
     /**
      * @ORM\Column(type="string", length=20)
+     * @Groups("experience:collection:get")
      */
     private $name;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Image", inversedBy="skills")
+     * @Groups("experience:collection:get")
      */
     private $image;
 
