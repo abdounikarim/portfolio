@@ -24,8 +24,6 @@ class CreateAdminCommand extends Command
      */
     private $validator;
 
-    private $error;
-
     private $errorMessages;
     /**
      * @var EntityManagerInterface
@@ -103,12 +101,9 @@ class CreateAdminCommand extends Command
             foreach ($errors as $error) {
                 $this->errorMessages[] = $error->getMessage();
             }
-            $errorsString = (string) $errors;
-            $this->error = true;
 
-            return $errorsString;
+            return (string) $errors;
         }
-        $this->error = false;
 
         return null;
     }
