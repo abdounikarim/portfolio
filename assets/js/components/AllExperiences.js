@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import Experience from "./Experience";
-import {getLastThreeExperiences} from '../api/experience_api';
+import {getExperiences} from '../api/experience_api';
 
-export default class LastThreeExperiences extends Component {
+export default class AllExperiences extends Component {
 
     constructor(props) {
         super(props);
@@ -13,7 +13,7 @@ export default class LastThreeExperiences extends Component {
     }
 
     componentDidMount() {
-        getLastThreeExperiences()
+        getExperiences()
             .then((data) => {
                 this.setState({
                     experiences: data
@@ -30,25 +30,11 @@ export default class LastThreeExperiences extends Component {
                         <Experience
                             key={experience.id}
                             experience={experience}
-                            front={true}
+                            front={false}
                             index={index}
                         />
                     ))
                 )}
-
-                {/*
-                {{ include('_inc/_experience_title.html.twig') }}
-
-                {% for experience in experiences %}
-                {{ include('_inc/_experience.html.twig', {
-                    front: true
-                }) }}
-                {% endfor %}
-
-                {{ include('_inc/_portfolio.html.twig', {
-                    all: false
-                }) }}
-                */}
             </div>
         );
     }

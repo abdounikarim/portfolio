@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 
 export default class Experience extends Component {
     constructor(props) {
@@ -39,7 +40,7 @@ export default class Experience extends Component {
                 { index === 2 && front === true &&
                     <div className="inner left">
                         <ul className="actions center">
-                            <li><a href="#" className="button">Toutes les expériences</a></li>
+                            <li><Link to="/experiences" className="button">Toutes les expériences</Link></li>
                         </ul>
                     </div>
                 }
