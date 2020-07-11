@@ -67,7 +67,8 @@ Encore
     .autoProvidejQuery()
 
     // uncomment if you use API Platform Admin (composer req api-admin)
-    .enableReactPreset()
+    //.enableReactPreset()
+    .enableVueLoader()
     //.addEntry('admin', './assets/js/admin.js')
     .addLoader({
         test: /\.(pdf)$/,

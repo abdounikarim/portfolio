@@ -7,11 +7,12 @@
 
 // any CSS you import will output into a single css file (app.css in this case)
 import '../css/app.css';
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Routing from "./config/Routing";
+import Vue from 'vue';
 
 // Need jQuery? Install it with "yarn add jquery", then uncomment to import it.
-import '../js/lib/main';
+//import '../js/lib/main';
 
-ReactDOM.render(<Routing />, document.getElementById('page-wrapper'));
+new Vue({
+    el: '#app',
+    template: '<h1>Hello from Vue</h1>',
+})
