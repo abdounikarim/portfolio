@@ -1,9 +1,14 @@
 <template>
-    <h1>Expériences</h1>
+    <experience-title />
 </template>
 
 <script>
+    import ExperienceTitle from '../components/experience_title';
+
     export default {
-        name: 'Experiences'
+        name: 'Experiences',
+        components: {
+            ExperienceTitle,
+        }
     }
 </script>

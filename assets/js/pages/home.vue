@@ -1,26 +1,16 @@
 <template>
-    <main>
-        <header-component />
-        <menu-component />
-        <banner-component />
-        <h1>Hello from Vue</h1>
-        <footer-component />
-    </main>
+    <experience-title-component />
+    <!-- Expériences -->
+    <!-- Portfolio -->
 </template>
 
 <script>
-    import HeaderComponent from "../components/header";
-    import BannerComponent from "../components/banner";
-    import MenuComponent from "../components/menu";
-    import FooterComponent from "../components/footer";
+    import ExperienceTitleComponent from '../components/experience_title';
 
     export default {
         name: 'Home',
         components: {
-            HeaderComponent,
-            BannerComponent,
-            MenuComponent,
-            FooterComponent,
-        },
+            ExperienceTitleComponent,
+        }
     }
 </script>
