@@ -68,6 +68,12 @@ Encore
 
     // uncomment if you use API Platform Admin (composer req api-admin)
     //.enableReactPreset()
+    .copyFiles({
+        from: './assets/images',
+        to: Encore.isProduction()
+            ? 'images/[path][name].[hash:8].[ext]'
+            : 'images/[path][name].[ext]',
+    })
     .enableVueLoader()
     //.addEntry('admin', './assets/js/admin.js')
     .addLoader({

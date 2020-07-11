@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class FrontController extends AbstractController
 {
     /**
-     * @Route("/{reactRouting}", name="home", defaults={"reactRouting": null})
+     * @Route("/{route}", name="vue_pages", requirements={"route"="^.+"}, defaults={"route": null})
      */
     public function front()
     {

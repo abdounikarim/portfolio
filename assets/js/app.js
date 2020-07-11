@@ -8,11 +8,12 @@
 // any CSS you import will output into a single css file (app.css in this case)
 import '../css/app.css';
 import Vue from 'vue';
+import router from './router';
 
 // Need jQuery? Install it with "yarn add jquery", then uncomment to import it.
-//import '../js/lib/main';
+import './lib/main';
 
 new Vue({
-    el: '#app',
-    template: '<h1>Hello from Vue</h1>',
-})
+    router,
+    template: '<router-view class="view"></router-view>',
+}).$mount('#app')
