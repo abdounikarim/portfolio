@@ -5,7 +5,7 @@
 </template>
 
 <script>
-    import ExperienceTitleComponent from '../components/experience_title';
+    import ExperienceTitleComponent from '../components/experience-title';
 
     export default {
         name: 'Home',

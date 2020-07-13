@@ -8,7 +8,8 @@ use Symfony\Component\Routing\Annotation\Route;
 class FrontController extends AbstractController
 {
     /**
-     * @Route("/{route}", name="vue_pages", requirements={"route"="^.+"}, defaults={"route": null})
+     * @Route("/", name="front")
+     * @Route("/{route}", name="vue_pages", requirements={"route"="^(?!api).+"})
      */
     public function front()
     {

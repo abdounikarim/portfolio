@@ -3,12 +3,24 @@
 </template>
 
 <script>
-    import ExperienceTitle from '../components/experience_title';
+    import axios from 'axios';
+    import ExperienceTitle from '../components/experience-title';
 
     export default {
         name: 'Experiences',
         components: {
             ExperienceTitle,
+        },
+        data() {
+            return {
+                experiences: []
+            }
+        },
+        async mounted() {
+            const response = await axios.get('/api/experiences');
+
+            this.experiences = response.data['hydra:member'];
+            console.log(this.experiences);
         }
     }
 </script>
