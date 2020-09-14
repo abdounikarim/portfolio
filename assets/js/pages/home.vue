@@ -21,31 +21,37 @@
 
         <!-- Portfolio -->
         <portfolio-component :all="false" />
+
+        <!-- Contact -->
+        <contact-component />
     </div>
 </template>
 
 <script>
-    import ExperienceTitleComponent from '../components/experience-title';
-    import ExperienceComponent from '../components/experience';
-    import PortfolioComponent from '../components/portfolio';
-    import axios from "axios";
+import ContactComponent from "../components/contact";
+import ExperienceComponent from '../components/experience';
+import ExperienceTitleComponent from '../components/experience-title';
+import PortfolioComponent from '../components/portfolio';
 
-    export default {
-        name: 'HomePage',
-        components: {
-            ExperienceTitleComponent,
-            ExperienceComponent,
-            PortfolioComponent,
-        },
-        data() {
-            return {
-                experiences: []
-            }
-        },
-        async mounted() {
-            const response = await axios.get('/api/experiences');
+import axios from "axios";
 
-            this.experiences = response.data['hydra:member'];
+export default {
+    name: 'HomePage',
+    components: {
+        ContactComponent,
+        ExperienceComponent,
+        ExperienceTitleComponent,
+        PortfolioComponent,
+    },
+    data() {
+        return {
+            experiences: []
         }
+    },
+    async mounted() {
+        const response = await axios.get('/api/experiences');
+
+        this.experiences = response.data['hydra:member'];
     }
+}
 </script>
