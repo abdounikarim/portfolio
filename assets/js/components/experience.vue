@@ -4,8 +4,7 @@
     >
         <div class="inner">
             <a href="#" class="image">
-                <!-- TODO - add image -->
-                Image
+                <img :src="experience.image.name" :alt="experience.image.alt" />
             </a>
             <div class="content">
                 <h2 class="major">{{ experience.title }}</h2>
@@ -14,6 +13,18 @@
                 <br>
                 <div v-if="front === false">
                     <p><b><i>Compétences</i></b></p>
+                    <p
+                        :class="index % 2 === 0 ? 'img-icons-2' : 'img-icons-1'"
+                    >
+                        <span
+                            class="experience_skills"
+                            v-for="skill in experience.skills"
+                        >
+                            <skill-component
+                                :skill="skill"
+                            />
+                        </span>
+                    </p>
                 </div>
             </div>
         </div>
@@ -29,8 +40,13 @@
 </template>
 
 <script>
+import SkillComponent from './skill';
+
 export default {
     name: 'Experience',
+    components: {
+        SkillComponent,
+    },
     props: {
         experience: {
             type: Object,
