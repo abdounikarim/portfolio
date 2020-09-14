@@ -12,7 +12,7 @@ import App from './App.vue'
 import router from './router'
 
 // Need jQuery? Install it with "yarn add jquery", then uncomment to import it.
-import '../js/lib/main';
+//import '../js/lib/main';
 
 new Vue({
     router,

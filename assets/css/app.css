@@ -3177,6 +3177,7 @@ button:disabled,
     top: 0;
     visibility: hidden;
     width: 100%;
+    z-index: 1;
 }
 
 #menu .inner {
@@ -3285,6 +3286,7 @@ body.is-menu-visible #menu .inner {
 #banner {
     padding: 10em 0 4.75em 0;
     background-color: #3F51B5;
+    z-index: 2;
 }
 
 #banner .inner {
