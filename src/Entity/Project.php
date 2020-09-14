@@ -6,13 +6,14 @@ use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ProjectRepository")
  * @ApiResource(
  *     collectionOperations={
- *         "get",
+ *         "get"={"normalization_context"={"groups"="project:collection:get"}},
  *         "post"={"security"="is_granted('ROLE_ADMIN')"}
  *     },
  *     itemOperations={
@@ -28,44 +29,52 @@ class Project
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
+     * @Groups("project:collection:get")
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups("project:collection:get")
      * @Assert\NotBlank()
      */
     private $name;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Image", inversedBy="projects")
+     * @Groups("project:collection:get")
      */
     private $image;
 
     /**
      * @ORM\ManyToMany(targetEntity="App\Entity\Skill", inversedBy="projects")
+     * @Groups("project:collection:get")
      */
     private $skills;
 
     /**
      * @ORM\Column(type="text")
      * @Assert\NotBlank()
+     * @Groups("project:collection:get")
      */
     private $description;
 
     /**
      * @ORM\Column(type="date")
+     * @Groups("project:collection:get")
      */
     private $started;
 
     /**
      * @ORM\Column(type="date", nullable=true)
+     * @Groups("project:collection:get")
      */
     private $ended;
 
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\Url()
+     * @Groups("project:collection:get")
      */
     private $link;
 

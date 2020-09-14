@@ -20,21 +20,11 @@
                             class="experience_skills"
                             v-for="skill in experience.skills"
                         >
-                            <skill-component
-                                :skill="skill"
-                            />
+                            <skill-component :skill="skill" />
                         </span>
                     </p>
                 </div>
             </div>
-        </div>
-        <div
-            class="inner left"
-            v-if="index === 2 && front === true"
-        >
-            <ul class="actions center">
-                <li><a href="#" class="button">Toutes les expériences</a></li>
-            </ul>
         </div>
     </section>
 </template>

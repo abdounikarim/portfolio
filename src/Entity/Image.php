@@ -33,13 +33,13 @@ class Image
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups("experience:collection:get")
+     * @Groups({"experience:collection:get", "project:collection:get"})
      */
     private $name;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups("experience:collection:get")
+     * @Groups({"experience:collection:get", "project:collection:get"})
      */
     private $alt;
 
