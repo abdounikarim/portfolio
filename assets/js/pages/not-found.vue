@@ -14,7 +14,7 @@
 import BackToHomeComponent from '../components/back-to-home';
 
 export default {
-    name: 'Not found',
+    name: 'NotFoundPage',
     components: {
         BackToHomeComponent,
     }

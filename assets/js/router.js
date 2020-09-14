@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import PageHome from './pages/Home';
-import PageExperiences from './pages/Experiences';
+import PageExperiences from './pages/experiences';
+import PageProjects from './pages/projects';
 import NotFound from './pages/not-found';
 
 Vue.use(Router)
@@ -18,6 +19,11 @@ export default new Router({
             path: '/experiences',
             name: 'experiences',
             component: PageExperiences
+        },
+        {
+            path: '/projets',
+            name: 'projects',
+            component: PageProjects
         },
         {
             path: '*',           // wildcard

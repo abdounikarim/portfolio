@@ -3,16 +3,17 @@
         <div class="inner">
             <h2 class="major">Portfolio</h2>
             <p>Dans cette section, vous pouvez retrouver une partie des différents projets sur lesquels j'ai travaillé. Que ce soit seul ou en équipe, je suis capable de m'adapter pour répondre aux besoins du client.</p>
-            <div class="features" v-for="project in projects">
-                <project-component :project="project" />
+            <div class="features">
+                <div v-for="project in projects">
+                    <project-component :project="project" />
+                </div>
             </div>
-            <!--
-            {% if all is same as(false) %}
-            <ul class="actions center">
-                <li><a href="{{ path('projects') }}" class="button">Tous les projets</a></li>
-            </ul>
-            {% endif %}
-           -->
+
+            <div v-if="all === false">
+                <ul class="actions center">
+                    <li><router-link to="/projets" class="button">Tous les projets</router-link></li>
+                </ul>
+            </div>
         </div>
     </section>
 </template>

@@ -20,7 +20,7 @@
     import BackToHomeComponent from '../components/back-to-home';
 
     export default {
-        name: 'Experiences',
+        name: 'ExperiencesPage',
         components: {
             ExperienceTitle,
             ExperienceComponent,

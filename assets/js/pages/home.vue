@@ -31,7 +31,7 @@
     import axios from "axios";
 
     export default {
-        name: 'Home',
+        name: 'HomePage',
         components: {
             ExperienceTitleComponent,
             ExperienceComponent,
