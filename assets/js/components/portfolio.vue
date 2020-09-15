@@ -42,8 +42,6 @@ export default {
         const response = await axios.get('/api/projects');
 
         this.projects = response.data['hydra:member'];
-
-        console.log(this.projects);
     }
 }
 </script>
