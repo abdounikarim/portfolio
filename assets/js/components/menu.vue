@@ -1,16 +1,14 @@
 <template>
-    <nav
-        id="menu"
-    >
+    <nav id="menu">
         <div class="inner">
             <h2>Menu</h2>
             <ul class="links">
-                <li><router-link to="/">Accueil</router-link></li>
-                <li><router-link to="/experiences">Expériences</router-link></li>
-                <li><router-link to="/experiences">Portfolio</router-link></li>
-                <li><router-link to="/mentions-legales">Mentions légales</router-link></li>
+                <li @click="toggleMenu"><router-link to="/">Accueil</router-link></li>
+                <li @click="toggleMenu"><router-link to="/experiences">Expériences</router-link></li>
+                <li @click="toggleMenu"><router-link to="/projets">Portfolio</router-link></li>
+                <li @click="toggleMenu"><router-link to="/mentions-legales">Mentions légales</router-link></li>
             </ul>
-            <a href="#" class="close">Fermer</a>
+            <a @click="toggleMenu" href="#" class="close">Fermer</a>
         </div>
     </nav>
 </template>
@@ -25,8 +23,9 @@
         },
         methods: {
             toggleMenu() {
-                console.log(this.activeMenu);
-                this.activeMenu = !this.activeMenu;
+                let bodyElement = document.getElementsByTagName('body');
+                let body = bodyElement[0];
+                body.classList.remove('is-menu-visible');
             }
         }
     }

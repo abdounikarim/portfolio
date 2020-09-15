@@ -5,7 +5,7 @@
         </div>
         <h1><router-link to="/">Abdouni Abdelkarim</router-link></h1>
         <nav>
-            <a href="#menu">Menu</a>
+            <a @click="toggleMenu" href="#menu">Menu</a>
         </nav>
     </header>
 </template>
@@ -24,6 +24,13 @@
 
             if(message.length > 0) {
                 this.flashMessage = message[0];
+            }
+        },
+        methods: {
+            toggleMenu() {
+                let bodyElement = document.getElementsByTagName('body');
+                let body = bodyElement[0];
+                body.classList.toggle('is-menu-visible');
             }
         }
     }
