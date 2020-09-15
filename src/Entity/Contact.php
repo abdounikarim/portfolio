@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ContactRepository")
@@ -23,16 +24,28 @@ class Contact
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="Merci de renseigner un nom")
+     * @Assert\Length(
+     *     min=2, minMessage="Vous devez renseigner un minimum de {{ limit }} caractères",
+     *     max="255", maxMessage="Vous devez renseigner un maximum de {{ limit }} caractères",
+     * )
      */
     private $name;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Email(message="Merci de renseigner un email valide")
+     * @Assert\NotBlank(message="Merci de renseigner un email")
+     * @Assert\Length(
+     *     min=2, minMessage="Vous devez renseigner un minimum de {{ limit }} caractères",
+     *     max="255", maxMessage="Vous devez renseigner un maximum de {{ limit }} caractères",
+     * )
      */
     private $email;
 
     /**
      * @ORM\Column(type="text")
+     * @Assert\NotBlank(message="Merci de renseigner un message")
      */
     private $message;
 
