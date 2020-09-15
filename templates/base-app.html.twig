@@ -10,7 +10,7 @@
     </head>
     <body>
         {% block body %}
-            <div id="app" data-errors="{{ errors }}"></div>
+            <div id="app" data-errors="{{ errors|json_encode }}" data-message="{{ app.flashes('contact')|json_encode }}"></div>
         {% endblock %}
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}

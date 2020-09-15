@@ -45,10 +45,9 @@ export default {
     },
     created() {
         const app = document.getElementById('app')
-        const errors = app.dataset.errors;
+        const errors = JSON.parse(app.dataset.errors);
 
-        // Here, null is a string, not a bool
-        if (errors !== 'null') {
+        if (errors.length > 0) {
             const violations = JSON.parse(errors).violations;
 
             for (let i = 0; i < violations.length; i++) {
@@ -60,7 +59,7 @@ export default {
     },
     methods: {
         addError(element, violation) {
-            console.log(violation);
+
             if(violation.propertyPath === element) {
                 //Make the first letter uppercase
                 let elementUcfirst = element.charAt(0).toUpperCase() + element.slice(1);

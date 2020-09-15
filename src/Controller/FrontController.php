@@ -35,8 +35,12 @@ class FrontController extends AbstractController
             return $this->redirectToRoute('front');
         }
 
+        if (count($errors) > 0) {
+            $errors = $serializer->serialize($errors, 'json');
+        }
+
         return $this->render('base-app.html.twig', [
-            'errors' => $serializer->serialize($errors, 'json'),
+            'errors' => $errors,
         ]);
     }
 }
