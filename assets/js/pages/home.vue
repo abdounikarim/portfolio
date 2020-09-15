@@ -31,7 +31,7 @@ import ContactComponent from "../components/contact";
 import ExperienceComponent from '../components/experience';
 import ExperienceTitleComponent from '../components/experience-title';
 import PortfolioComponent from '../components/portfolio';
-import { getExperiences } from '../api/api';
+import { getLastThreeExperiences } from '../api/api';
 
 export default {
     name: 'HomePage',
@@ -47,7 +47,7 @@ export default {
         }
     },
     async mounted() {
-        const response = await getExperiences();
+        const response = await getLastThreeExperiences();
 
         this.experiences = response.data['hydra:member'];
     }
