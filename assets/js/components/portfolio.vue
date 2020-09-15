@@ -21,8 +21,8 @@
 </template>
 
 <script>
-import axios from 'axios';
 import ProjectComponent from '../components/project';
+import { getProjects } from '../api/api';
 
 export default {
     name: 'Portfolio',
@@ -41,7 +41,7 @@ export default {
         }
     },
     async mounted() {
-        const response = await axios.get('/api/projects');
+        const response = await getProjects();
 
         this.projects = response.data['hydra:member'];
     }

@@ -13,10 +13,10 @@
 </template>
 
 <script>
-    import axios from 'axios';
     import ExperienceTitle from '../components/experience-title';
     import ExperienceComponent from '../components/experience';
     import BackToHomeComponent from '../components/back-to-home';
+    import { getExperiences } from '../api/api';
 
     export default {
         name: 'ExperiencesPage',
@@ -31,11 +31,9 @@
             }
         },
         async mounted() {
-            const response = await axios.get('/api/experiences');
+            const response = await getExperiences();
 
             this.experiences = response.data['hydra:member'];
-
-            console.log(this.experiences);
         }
     }
 </script>
