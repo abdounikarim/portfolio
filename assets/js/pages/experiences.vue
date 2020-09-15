@@ -1,14 +1,13 @@
 <template>
     <div>
         <experience-title />
-        <div v-for="(experience, index) in experiences">
-            <experience-component
-                :experience="experience"
-                :index="index"
-                :front="false"
-                :key="index"
-            />
-        </div>
+        <experience-component
+            v-for="(experience, index) in experiences"
+            :experience="experience"
+            :index="index"
+            :front="false"
+            :key="index"
+        />
         <back-to-home-component />
     </div>
 </template>

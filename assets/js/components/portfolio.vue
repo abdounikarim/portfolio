@@ -4,9 +4,11 @@
             <h2 class="major">Portfolio</h2>
             <p>Dans cette section, vous pouvez retrouver une partie des différents projets sur lesquels j'ai travaillé. Que ce soit seul ou en équipe, je suis capable de m'adapter pour répondre aux besoins du client.</p>
             <div class="features">
-                <div v-for="project in projects">
-                    <project-component :project="project" />
-                </div>
+                <project-component
+                    v-for="project in projects"
+                    :project="project"
+                    :key="project.id"
+                />
             </div>
 
             <div v-if="all === false">

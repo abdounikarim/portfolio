@@ -25,7 +25,7 @@ class Mail
             ->from($values['email'])
             ->to('abdounikarim@gmail.com')
             ->subject('Contact')
-            ->htmlTemplate('front/email.html.twig')
+            ->htmlTemplate('email.html.twig')
             ->context([
                 'values' => $values,
             ])

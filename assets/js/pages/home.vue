@@ -3,14 +3,13 @@
         <experience-title-component />
 
         <!-- Expériences -->
-        <div v-for="(experience, index) in experiences">
-            <experience-component
-                :experience="experience"
-                :index="index"
-                :front="true"
-                :key="index"
-            />
-        </div>
+        <experience-component
+            v-for="(experience, index) in experiences"
+            :experience="experience"
+            :index="index"
+            :front="true"
+            :key="index"
+        />
         <div class="inner left">
             <ul class="actions center">
                 <li>
