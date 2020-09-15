@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\Contact;
+use App\Form\Model\ContactFormModel;
 use App\Service\Mail;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -22,7 +22,7 @@ class FrontController extends AbstractController
         $values = $request->request->get('contact');
         if ($values) {
             $json = json_encode($values);
-            $contact = $serializer->deserialize($json, Contact::class, 'json');
+            $contact = $serializer->deserialize($json, ContactFormModel::class, 'json');
             $errors = $validator->validate($contact);
         }
 
