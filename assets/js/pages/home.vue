@@ -19,6 +19,7 @@
         </div>
 
         <!-- Portfolio -->
+        <!-- TODO : replace to get only the fourth last projects -->
         <portfolio-component :all="false" />
 
         <!-- Contact -->
