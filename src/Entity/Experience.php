@@ -10,17 +10,7 @@ use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ExperienceRepository")
- * @ApiResource(
- *     collectionOperations={
- *         "get"={"normalization_context"={"groups"="experience:collection:get"}},
- *         "post"={"security"="is_granted('ROLE_ADMIN')"}
- *     },
- *     itemOperations={
- *         "get",
- *         "put"={"security"="is_granted('ROLE_ADMIN')"},
- *         "delete"={"security"="is_granted('ROLE_ADMIN')"}
- *     }
- * )
+ * @ApiResource()
  */
 class Experience
 {
@@ -28,7 +18,7 @@ class Experience
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
-     * @Groups("experience:collection:get")
+     * @Groups("hello")
      */
     private $id;
 

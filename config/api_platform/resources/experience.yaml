@@ -1,0 +1,10 @@
+App\Entity\Experience:
+    itemOperations:
+        get_report:
+            method: GET
+            path: /experiences/{id}/report.{_format}
+            controller: App\Controller\ExperienceReport
+            normalization_context:
+                groups: ['hello']
+            denormalization_context:
+                groups: ['hello']

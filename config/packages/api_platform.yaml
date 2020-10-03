@@ -1,7 +1,7 @@
 api_platform:
     enable_docs: true
     mapping:
-        paths: ['%kernel.project_dir%/src/Entity']
+        paths: ['%kernel.project_dir%/config/api_platform/resources']
     patch_formats:
         json: ['application/merge-patch+json']
     swagger:
