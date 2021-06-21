@@ -24,7 +24,7 @@ parameters:
             triggered_by: ['php']
         phpmd:
             whitelist_patterns: []
-            exclude: []
+            exclude: ['src/Kernel.php']
             ruleset: ['cleancode', 'codesize']
             triggered_by: ['php']
         phpstan:
