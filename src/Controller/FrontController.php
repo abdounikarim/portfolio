@@ -14,7 +14,7 @@ class FrontController extends AbstractController
 {
     /**
      * @Route("/", name="front")
-     * @Route("/{route}", name="vue_pages", requirements={"route"="^(?!api).+"})
+     * @Route("/{route}", name="vue_pages", requirements={"route"="^(?!.*_wdt|_profiler|api|admin).+"})
      */
     public function front(Request $request, SerializerInterface $serializer, ValidatorInterface $validator, Mail $mail)
     {
