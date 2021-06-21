@@ -556,6 +556,9 @@
     "symfony/panther": {
         "version": "v0.7.1"
     },
+    "symfony/password-hasher": {
+        "version": "v5.3.2"
+    },
     "symfony/phpunit-bridge": {
         "version": "4.3",
         "recipe": {
