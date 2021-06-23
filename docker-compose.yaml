@@ -1,15 +1,25 @@
 version: "3.4"
 
 services:
+    database:
+        image: postgres:${POSTGRES_VERSION:-13}-alpine
+        environment:
+            POSTGRES_DB: ${POSTGRES_DB:-app}
+            # You should definitely change the password in production
+            POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-ChangeMe}
+            POSTGRES_USER: ${POSTGRES_USER:-symfony}
+        volumes:
+            - db-data:/var/lib/postgresql/data:rw
+    
     php:
         build:
             context: .
             target: symfony_php
+        environment:
+            DATABASE_URL: postgresql://${POSTGRES_USER:-symfony}:${POSTGRES_PASSWORD:-ChangeMe}@database:5432/${POSTGRES_DB:-app}?serverVersion=${POSTGRES_VERSION:-13}
         restart: unless-stopped
         volumes:
             - php_socket:/var/run/php
-        env_file:
-            - .env.local
 
     caddy:
         build:
@@ -42,3 +52,4 @@ volumes:
     php_socket:
     caddy_data:
     caddy_config:
+    db-data:
