@@ -10,6 +10,7 @@ use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ImageRepository")
+ * @ORM\Table(name="portfolio_image")
  * @ApiResource(
  *     collectionOperations={
  *         "get",
