@@ -2,12 +2,25 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ExperienceRepository")
+ * @ApiResource(
+ *     collectionOperations={
+ *         "get"={"normalization_context"={"groups"="experience:collection:get"}},
+ *         "post"={"security"="is_granted('ROLE_ADMIN')"}
+ *     },
+ *     itemOperations={
+ *         "get",
+ *         "put"={"security"="is_granted('ROLE_ADMIN')"},
+ *         "delete"={"security"="is_granted('ROLE_ADMIN')"}
+ *     }
+ * )
  */
 class Experience
 {
@@ -15,11 +28,13 @@ class Experience
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
+     * @Groups("experience:collection:get")
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups("experience:collection:get")
      */
     private $title;
 
@@ -35,16 +50,19 @@ class Experience
 
     /**
      * @ORM\Column(type="text")
+     * @Groups("experience:collection:get")
      */
     private $description;
 
     /**
      * @ORM\ManyToMany(targetEntity="App\Entity\Skill", inversedBy="experiences")
+     * @Groups("experience:collection:get")
      */
     private $skills;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Image", inversedBy="experiences")
+     * @Groups("experience:collection:get")
      */
     private $image;
 

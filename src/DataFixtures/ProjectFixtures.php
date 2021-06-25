@@ -16,9 +16,9 @@ class ProjectFixtures extends Fixture implements DependentFixtureInterface
     {
         foreach ($this->imagesForProjects as $image) {
             $project = new Project();
-            $project->setName('Project');
-            $project->setDescription('Project description');
-            $project->setLink('https://project.com');
+            $project->setName('Project '.uniqid());
+            $project->setDescription('Project description '.uniqid());
+            $project->setLink('https://project.com/'.uniqid());
             $project->setStarted(new DateTime());
             $project->setImage($this->getReference('image-for-project-'.$image));
             $project->addSkill($this->getReference('skill-'.rand(1, 2)));

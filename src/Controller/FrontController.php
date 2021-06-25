@@ -2,74 +2,45 @@
 
 namespace App\Controller;
 
-use App\Form\ContactType;
-use App\Repository\ExperienceRepository;
-use App\Repository\ProjectRepository;
+use App\Form\Model\ContactFormModel;
 use App\Service\Mail;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Serializer\SerializerInterface;
+use Symfony\Component\Validator\Validator\ValidatorInterface;
 
 class FrontController extends AbstractController
 {
     /**
      * @Route("/", name="front")
+     * @Route("/{route}", name="vue_pages", requirements={"route"="^(?!.*_wdt|_profiler|api|admin).+"})
      */
-    public function front(Request $request, Mail $mail, ExperienceRepository $experienceRepository, ProjectRepository $projectRepository)
+    public function front(Request $request, SerializerInterface $serializer, ValidatorInterface $validator, Mail $mail)
     {
-        $form = $this->createForm(ContactType::class);
-        $form->handleRequest($request);
-        if ($form->isSubmitted() && $form->isValid()) {
-            $mail->send($form->getData());
-            $this->addFlash('contact', 'Votre message a bien été envoyé');
+        $errors = [];
+        $values = $request->request->get('contact');
+        if ($values) {
+            $json = json_encode($values);
+            $contact = $serializer->deserialize($json, ContactFormModel::class, 'json');
+            $errors = $validator->validate($contact);
+        }
 
+        if (0 === count($errors) && $request->isMethod('POST')) {
+            //Send the mail with data
+            $mail->send($values);
+            //Add flash message
+            $this->addFlash('contact', 'Votre message a bien été envoyé');
+            //Redirect to home
             return $this->redirectToRoute('front');
         }
 
-        return $this->render('front/index.html.twig', [
-            'experiences' => $experienceRepository->findLastThree(),
-            'projects' => $projectRepository->findLastFourth(),
-            'form' => $form->createView(),
+        if (count($errors) > 0) {
+            $errors = $serializer->serialize($errors, 'json');
+        }
+
+        return $this->render('base-app.html.twig', [
+            'errors' => $errors,
         ]);
-    }
-
-    /**
-     * @Route("/experiences", name="experiences")
-     */
-    public function experiences(ExperienceRepository $experienceRepository)
-    {
-        return $this->render('front/experiences.html.twig', [
-            'experiences' => $experienceRepository->findBy([], [
-                'id' => 'DESC',
-            ]),
-        ]);
-    }
-
-    public function experience()
-    {
-    }
-
-    /**
-     * @Route("/projets", name="projects")
-     */
-    public function projects(ProjectRepository $projectRepository)
-    {
-        return $this->render('front/projects.html.twig', [
-            'projects' => $projectRepository->findBy([], [
-                'id' => 'DESC',
-            ]),
-        ]);
-    }
-
-    public function project()
-    {
-    }
-
-    /**
-     * @Route("/mentions-legales", name="legals")
-     */
-    public function legal()
-    {
-        return $this->render('front/legal.html.twig');
     }
 }

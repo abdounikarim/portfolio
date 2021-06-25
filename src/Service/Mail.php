@@ -2,7 +2,6 @@
 
 namespace App\Service;
 
-use App\Entity\Contact;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Component\Mailer\Exception\TransportException;
 use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
@@ -20,19 +19,15 @@ class Mail
         $this->mailer = $mailer;
     }
 
-    public function send(Contact $contact)
+    public function send($values)
     {
         $email = (new TemplatedEmail())
-            ->from($contact->getEmail())
+            ->from($values['email'])
             ->to('abdounikarim@gmail.com')
             ->subject('Contact')
-
-            // path of the Twig template to render
-            ->htmlTemplate('front/email.html.twig')
-
-            // pass variables (name => value) to the template
+            ->htmlTemplate('email.html.twig')
             ->context([
-                'contact' => $contact,
+                'values' => $values,
             ])
         ;
         try {

@@ -1,0 +1,19 @@
+// <root-dir>/site.webmanifest
+{
+    // the primary locale of the app as a valid HTML language attribute
+    // (see https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang)
+    "lang": "fr-FR",
+
+    // the name of the web application as it is usually displayed to the user
+    "name": "Portfolio Application",
+    // a shorter variant of the app name to be displayed when there is not
+    // enough space (e.g. as a label for an icon on the phone home screen).
+    "short_name": "Portfolio",
+
+    // use it to explain what the application does
+    "description": "My personal portfolio",
+
+    // the preferred URL to be loaded when the user launches the web app
+    // (this is just a hint, so user agents can ignore this value)
+    "start_url": "https://abdounikarim.com"
+}
