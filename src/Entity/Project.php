@@ -11,6 +11,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ProjectRepository")
+ * @ORM\Table(name="portfolio_project")
  * @ApiResource(
  *     collectionOperations={
  *         "get"={"normalization_context"={"groups"="project:collection:get"}},

@@ -10,6 +10,7 @@ use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ExperienceRepository")
+ * @ORM\Table(name="portfolio_experience")
  * @ApiResource(
  *     collectionOperations={
  *         "get"={"normalization_context"={"groups"="experience:collection:get"}},
