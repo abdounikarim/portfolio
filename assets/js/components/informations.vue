@@ -1,20 +1,32 @@
 <template>
     <ul class="contact">
-        <li class="icon solid fa-phone">06-45-65-50-16</li>
-        <li class="icon solid fa-envelope">
-            <a href="mailto:abdounikarim@gmail.com">Mail</a>
+        <li>
+            <i class="fas fa-mobile-alt"></i> 06-45-65-50-16
         </li>
-        <li class="icon brands fa-github">
-            <a href="https://github.com/abdounikarim">Github</a>
+        <li>
+            <a href="mailto:abdounikarim@gmail.com">
+                <i class="far fa-envelope"></i> Mail
+            </a>
         </li>
-        <li class="icon brands fa-symfony">
-            <a href="https://connect.symfony.com/profile/abdounikarim">Symfony Connect</a>
+        <li>
+            <a href="https://github.com/abdounikarim">
+                <i class="fab fa-github"></i> Github
+            </a>
         </li>
-        <li class="icon brands fa-linkedin">
-            <a href="https://www.linkedin.com/in/abdelkarim-abdouni/">Linkedin</a>
+        <li>
+            <a href="https://connect.symfony.com/profile/abdounikarim">
+                <i class="fab fa-symfony"></i> Symfony Connect
+            </a>
         </li>
-        <li class="icon solid fa-file-pdf">
-            <a href="./cv.pdf" target="_blank">Télécharger mon CV</a>
+        <li>
+            <a href="https://www.linkedin.com/in/abdelkarim-abdouni/">
+                <i class="fab fa-linkedin"></i> Linkedin
+            </a>
+        </li>
+        <li>
+            <a href="./cv.pdf" target="_blank">
+                <i class="far fa-file-pdf"></i> Télécharger mon CV
+            </a>
         </li>
     </ul>
 </template>
