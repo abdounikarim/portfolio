@@ -7,6 +7,10 @@
 
 // any CSS you import will output into a single css file (app.css in this case)
 import '../css/app.css';
+import '@fortawesome/fontawesome-free/js/brands';
+import '@fortawesome/fontawesome-free/js/regular';
+import '@fortawesome/fontawesome-free/js/solid';
+import '@fortawesome/fontawesome-free/js/fontawesome';
 import Vue from 'vue';
 import App from './App.vue'
 import router from './router'

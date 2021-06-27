@@ -3676,6 +3676,7 @@ body.is-preload #banner p {
 
 #footer .inner .contact {
     width: calc(50% - 1.5em);
+    margin-top: 40px;
 }
 
 footer .inner .copyright {
